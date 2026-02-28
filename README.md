@@ -28,7 +28,7 @@
 
 ---
 
-### `stu_service.ipynb`（RAG + 语音模块版本）
+### `ca-student-ser.ipynb`（RAG + 语音模块版本）
 
 RAG + 语音交互版本（目前部署在 Kaggle 上）。
 
