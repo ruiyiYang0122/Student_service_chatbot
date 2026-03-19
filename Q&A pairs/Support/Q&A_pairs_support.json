@@ -1,0 +1,514 @@
+[
+  {
+    "question": "What training do SafeGuarding Officers at Heriot-Watt University have?",
+    "answer": "All SafeGuarding Officers are first aid and mental health first aid trained."
+  },
+  {
+    "question": "If the fire alarm goes off and you are self-isolating and unable to evacuate, what should you do?",
+    "answer": "Activate SafeZone or dial 0131 451 3500 and tell SafeGuarding you are in the building and cannot evacuate."
+  },
+  {
+    "question": "What are the quiet hours in on-campus residences?",
+    "answer": "The University operates quiet hours from 23:00 to 07:00 in our halls of residences."
+  },
+  {
+    "question": "How can you contact SafeGuarding in an emergency on Edinburgh campus?",
+    "answer": "By activating the SafeZone app, picking up a red phone, or calling 0131 451 3500."
+  },
+  {
+    "question": "What should you do if you identify a hazard on campus?",
+    "answer": "You should make your host, course tutor, School Safety Officer or SafeGuarding aware so they can record and address it."
+  },
+  {
+    "question": "What is the advice for protecting your bike on campus?",
+    "answer": "Use a good lock, mark your bike with a unique code, insure it, and park in a well-lit area. Lock both wheels and the frame to a cycle stand."
+  },
+  {
+    "question": "What should you do if you suspect a telephone scam?",
+    "answer": "Hang up, wait five minutes to clear the line (or use another phone), and then call your bank."
+  },
+  {
+    "question": "What is the lost property procedure at Edinburgh campus?",
+    "answer": "Lost property should be handed in to the SafeGuarding Services building on Gait 6, where it will be held for one week before being transferred to Fettes Police Station."
+  },
+  {
+    "question": "Can resident students park overnight on Edinburgh campus?",
+    "answer": "There is no overnight parking for students or staff at the Edinburgh campus, except for blue badge holders, carers, students with foreign registered vehicles, or those with a temporary injury (with evidence)."
+  },
+  {
+    "question": "What are the three main buttons in the SafeZone app?",
+    "answer": "First Aid, Enquiries, and Emergency."
+  },
+  {
+    "question": "How does the 'Check In' timer work in SafeZone?",
+    "answer": "You set a timer for your work session; if the timer expires, SafeZone raises an alert showing your location to SafeGuarding."
+  },
+  {
+    "question": "What is the deadline for submitting a Stage 1 academic appeal?",
+    "answer": "Not later than 10 working days after receipt of the information which forms the basis of the appeal."
+  },
+  {
+    "question": "What is the standard of proof used in academic appeals?",
+    "answer": "The balance of probability (more likely than not)."
+  },
+  {
+    "question": "What types of calculators are not permitted in exams?",
+    "answer": "Graphics calculators, programmable calculators, calculators with text storage or retrieval facilities, and calculators with internet access."
+  },
+  {
+    "question": "Give an example of a non-approved calculator model.",
+    "answer": "Casio fx-9750 family."
+  },
+  {
+    "question": "What is the accommodation guarantee deadline for 2026?",
+    "answer": "12:00 midday (BST) on 22 June 2026."
+  },
+  {
+    "question": "Who is covered by the accommodation guarantee?",
+    "answer": "New full-time students for a full academic year starting in September, with a Conditional Firm or Unconditional Firm offer, residing outside Edinburgh, applying by the deadline. Direct entrants and care-experienced students are included."
+  },
+  {
+    "question": "What happens if you are locked out of your room four times?",
+    "answer": "You will be charged £50 after every four times you are locked out."
+  },
+  {
+    "question": "Who provides the internet in residences and how can you contact them?",
+    "answer": "Glide provides the internet. You can contact them by phone on 0333 123 0115, email studentsupport@glide.co.uk, or tweet @GlideStuHelp."
+  },
+  {
+    "question": "When does the orchestra rehearse?",
+    "answer": "Monday evenings."
+  },
+  {
+    "question": "What services are available at the Edinburgh campus Health Centre?",
+    "answer": "Medical, nursing and dental healthcare."
+  },
+  {
+    "question": "What is the Campbell Maths Gym?",
+    "answer": "A service to support all Heriot-Watt students to strengthen mathematical and statistical skills via drop-in sessions, one-to-one appointments, workshops and online resources."
+  },
+  {
+    "question": "What constitutes misconduct according to the Student Discipline Policy?",
+    "answer": "Improper interference with the proper functioning of activities or property of the University, or any action that damages the University reputationally or materially. Includes specific examples like disruption, harassment, dishonesty, etc."
+  },
+  {
+    "question": "What is the maximum fine for a minor non-academic offence?",
+    "answer": "£250."
+  },
+  {
+    "question": "What does the ethics statement on exam papers require you to declare?",
+    "answer": "That the answers are entirely your own work and have not been shared with any other student, and that you understand the regulations on assessment misconduct."
+  },
+  {
+    "question": "What is the maximum turnaround time for feedback on assessed coursework?",
+    "answer": "Three working weeks."
+  },
+  {
+    "question": "How should you name your Final Online Assessment answer file?",
+    "answer": "StudentID_CourseCode, e.g., H00123456_B17CA.pdf."
+  },
+  {
+    "question": "When will Student Wellbeing Services provide evidence for a mitigating circumstances application?",
+    "answer": "When the student is in contact with and receiving support from Wellbeing, the circumstances are known to them, and they are satisfied it constitutes acceptable circumstances."
+  },
+  {
+    "question": "What is plagiarism in the context of AI tools?",
+    "answer": "Submitting work which is not your own, including using an AI tool to draft/write your assessment, is plagiarism and academic misconduct."
+  },
+  {
+    "question": "What are the key student surveys at Heriot-Watt?",
+    "answer": "National Student Survey (NSS), Postgraduate Taught Experience Survey (PTES), Postgraduate Research Experience Survey (PRES), Early Course Feedback, End of Semester Course Feedback."
+  },
+  {
+    "question": "What is the self-certification policy for mitigating circumstances?",
+    "answer": "If a student is unable to obtain evidence and the circumstances affected their studies for 7 days or less, they may submit a self-certification form instead of evidence."
+  },
+  {
+    "question": "What are examples of acceptable mitigating circumstances?",
+    "answer": "Significant illness or accident, bereavement, significant adverse personal or family circumstances, jury service, staff industrial action, severe adverse weather, etc."
+  },
+  {
+    "question": "Is bereavement of a close family member accepted as a mitigating circumstance?",
+    "answer": "Yes, with evidence such as death certificate, order of service, etc."
+  },
+  {
+    "question": "How many contact points should a personal tutor have with a tutee per semester?",
+    "answer": "The minimum number is three per semester (start of semester, consolidation week, teaching week 10)."
+  },
+  {
+    "question": "What is patchwriting?",
+    "answer": "Taking a sentence and merely replacing words with synonyms or altering the sentence structure slightly, which does not constitute true paraphrasing and is a form of plagiarism."
+  },
+  {
+    "question": "How are honorary degrees awarded at Heriot-Watt University?",
+    "answer": "Honorary degrees are awarded by the Senate following a process managed by the Honorary Degrees Committee. Nominations are invited from staff, and the committee selects candidates based on their merits. The selected individuals are then invited to accept the award, which is conferred at a congregation ceremony. The degrees that can be awarded as honorary degrees include Master of Science, Master of Letters, Doctor of Science, Doctor of Engineering, Doctor of Letters, and Doctor of the University."
+  },
+  {
+    "question": "What are the rules for borrowing library materials as an external member?",
+    "answer": "External members may borrow only those learning resources specifically designated by the Global Director of Information Services. Loan periods and conditions are set by the Director, and access to electronic resources may be restricted by licence agreements. External members must also pay any applicable charges for services."
+  },
+  {
+    "question": "What is the procedure for submitting a student academic appeal?",
+    "answer": "A student who wishes to appeal an academic decision must follow the Student Academic Appeal Policy and Procedures. The appeal must be submitted in the prescribed format, stating the grounds for appeal. Invalid grounds include disagreements with academic judgement. The appeal is considered first by appointed assessors, and if not resolved, may proceed to a hearing. The student cannot receive their award until the appeal is concluded."
+  },
+  {
+    "question": "What happens if a student is found to have committed a major disciplinary offence?",
+    "answer": "Major offences are considered by the University Discipline Committee. The Committee hears the case and can impose penalties such as suspension or expulsion. The student has the right to appeal the decision to the Discipline Appeal Committee. The standard of proof is the balance of probabilities."
+  },
+  {
+    "question": "What are the requirements for the award of a Postgraduate Diploma with distinction?",
+    "answer": "A Postgraduate Diploma with distinction requires an overall performance in qualifying courses at Grade A or equivalent average percentage mark, or the majority of qualifying courses at Grade A and no course at less than Grade C. The specific criteria are prescribed in the programme structures."
+  },
+  {
+    "question": "What is the purpose of the Student Engagement and Attendance Policy?",
+    "answer": "The policy aims to support student success by actively monitoring patterns of participation to identify when a student may be experiencing difficulties, prompting timely interventions and the provision of appropriate support. It emphasizes that sustained engagement is strongly linked to academic achievement."
+  },
+  {
+    "question": "Which student groups are covered by the Student Engagement and Attendance Policy?",
+    "answer": "The policy applies to all students enrolled in Foundation, Undergraduate, and Postgraduate-Taught programmes at Heriot-Watt University, studying on campus in Dubai, Edinburgh, Malaysia, Orkney, and Scottish Borders. The principles also apply to students at partner organisations."
+  },
+  {
+    "question": "What are the key components of student engagement according to the policy?",
+    "answer": "Engagement encompasses attendance at and participation in scheduled learning activities, interaction with digital learning platforms, engagement in formative and summative assessments, involvement in academic discussions, utilisation of support services, and providing feedback through student voice activities."
+  },
+  {
+    "question": "What data is collected to monitor student engagement?",
+    "answer": "Data points include Canvas logins and activity, assessment submissions, mitigating circumstances records, temporary suspension of studies, student record holds, and attendance monitoring data undertaken by the JISC system."
+  },
+  {
+    "question": "Can engagement data be used towards assessment grades?",
+    "answer": "Engagement data itself is not credit bearing and cannot be used towards summative or formative assessment grades. However, participation in quizzes or Canvas exercises can be made credit bearing if clearly communicated in Course Handbooks."
+  },
+  {
+    "question": "What are the visa attendance requirements for international students in Malaysia?",
+    "answer": "The University has a duty to record the attendance of international students on its Malaysia Campus. Attendance is expected at a minimum of 80% to ensure compliance with the Ministry of Higher Education and Immigration Malaysia."
+  },
+  {
+    "question": "What is the UK visa attendance requirement for international students on Scottish campuses?",
+    "answer": "The University has a requirement to record the attendance of students studying at the Scottish Campuses on a Student Visa issued by the UKVI, and this is covered by a separate process."
+  },
+  {
+    "question": "What is the definition of feedback according to the 'Your Feedback Your Learning' guide?",
+    "answer": "Feedback is information about how you are doing in your work, usually your performance in assessment, but it can also include other learning activities."
+  },
+  {
+    "question": "According to the Feedback Principles, within how many teaching weeks should assessed coursework be returned?",
+    "answer": "Assessed coursework, except some large-scale projects and dissertations, should be returned within 3 teaching weeks."
+  },
+  {
+    "question": "What are the key principles of feedback at Heriot-Watt University?",
+    "answer": "Feedback should be constructive, supportive of your learning, timely, inclusive, accessible, and relevant to the assessment criteria provided in advance."
+  },
+  {
+    "question": "Who can provide feedback to students?",
+    "answer": "Feedback can be provided by lecturers, tutors, supervisors, personal tutors, effective learning advisors, fellow students, placement employers, and even yourself through self-reflection."
+  },
+  {
+    "question": "What are some examples of feedback forms?",
+    "answer": "Feedback can include grades and marks, written comments on work, verbal comments, discussions with personal tutors, generic class comments, and responses to online discussions."
+  },
+  {
+    "question": "Where can students find health and wellbeing information for the Dubai Campus?",
+    "answer": "Students can find information on healthcare, student wellbeing, support for students of determination, health and safety, faith and belief, and Student Success Advisors on the Dubai Campus Health and Wellbeing pages."
+  },
+  {
+    "question": "What services are listed under the Edinburgh Campus Health and Wellbeing pages?",
+    "answer": "The Edinburgh Campus pages include links to Student Wellbeing Services, Doctor, Dentist, Health and safety, Faith and belief, and Environment and sustainability."
+  },
+  {
+    "question": "How does Heriot-Watt define a 'student carer'?",
+    "answer": "A student carer is anyone who cares, unpaid, for a friend or family member who due to illness, disability, a mental health problem or an addiction cannot cope without their support. This does not apply to paid placements or employment."
+  },
+  {
+    "question": "What award did Heriot-Watt receive from Carers Trust Scotland?",
+    "answer": "The University received the Going Higher for Student Carers Recognition Award in March 2020 from Carers Trust Scotland."
+  },
+  {
+    "question": "How can a student disclose that they are a carer?",
+    "answer": "Students can disclose by ticking the box on their UCAS application, emailing access@hw.ac.uk, ticking the box during enrolment, or at any point by emailing wpwellbeing@hw.ac.uk."
+  },
+  {
+    "question": "What evidence might be accepted to confirm carer status?",
+    "answer": "Acceptable evidence includes a doctor's letter, a local authority carers' assessment, a voluntary organisation assessment, a Young Carers Statement, a Carers Authorisation Card, or receipt of Carers Allowance for part-time students."
+  },
+  {
+    "question": "Who is the named point of contact for student carers at the Edinburgh campus?",
+    "answer": "Anna Skatun, Student Wellbeing and Transition Advisor, can be contacted at WPWellbeing@hw.ac.uk."
+  },
+  {
+    "question": "What financial support is available for student carers?",
+    "answer": "Student carers can apply for the Heriot-Watt Access Bursary and the Heriot-Watt Expenses Bursary. They are also given priority access to hardship and emergency funding from the Student Union Advice Hub."
+  },
+  {
+    "question": "What is the contact information for the Riccarton Dental Practice?",
+    "answer": "Riccarton Dental Practice can be contacted by email at riccartondental@clydemunrodental.com or by phone at +44 131 353 0299."
+  },
+  {
+    "question": "How can students register with the doctor at the Edinburgh Campus Health Centre?",
+    "answer": "Students can register at any time by completing a General Practice Registration form, which can be downloaded from the Medical Practice website or obtained by visiting the Health Centre."
+  },
+  {
+    "question": "What should a student do for a short absence from studies due to illness?",
+    "answer": "For a short absence of up to four working days, a student should fill in a self-certification form and submit it to their School Office."
+  },
+  {
+    "question": "What is the contact email for the University Chaplaincy?",
+    "answer": "The Chaplaincy can be contacted by email at chaplaincy@hw.ac.uk."
+  },
+  {
+    "question": "What weekly events are held at the Chaplaincy?",
+    "answer": "Weekly events include Tuesday Soup Lunch, Wednesday Evening Meal, Thursday International Women's Group, and Thursday Chill at the Chaplaincy with coffee and cake."
+  },
+  {
+    "question": "Who is the full-time Chaplain to the University?",
+    "answer": "Rev. Jane Howitt is the full-time Chaplain to the University."
+  },
+  {
+    "question": "What is the SafeZone app?",
+    "answer": "SafeZone is a free app-based system for students and staff that enhances their personal safety. It provides a quick way to alert security services when help or assistance is needed."
+  },
+  {
+    "question": "What is the purpose of the Disability Service Support Pathway?",
+    "answer": "The Disability Service Support Pathway outlines what students can expect from the service and what steps should be taken to receive support."
+  },
+  {
+    "question": "What is the contact email for the Disability Service?",
+    "answer": "The Disability Service can be contacted at disability@hw.ac.uk."
+  },
+  {
+    "question": "When are the Disability Service drop-in sessions held?",
+    "answer": "Drop-in sessions are held between 11.00 and 12.00 on Monday, Wednesday, and Friday throughout the semester."
+  },
+  {
+    "question": "What types of support can the Disability Service provide?",
+    "answer": "The Disability Service can provide assessment of individual support needs, advising on alternative exam arrangements, assistance in finding personal helpers, initial screening for dyslexia, arranging educational psychologist assessments, and support with DSA applications."
+  },
+  {
+    "question": "What types of support is the Disability Service unable to provide?",
+    "answer": "The Disability Service cannot offer personal or social care assistance, such as help with mobility, personal hygiene, meal preparation, or domestic tasks."
+  },
+  {
+    "question": "What is Disabled Students' Allowance (DSA)?",
+    "answer": "DSA is additional funding for eligible UK students to meet any additional study-related costs that a student may incur as a result of their disability. It is non-means tested and paid by the student's funding agency."
+  },
+  {
+    "question": "What assistive software is available on the University network?",
+    "answer": "Assistive software includes Everway Read & Write, MindGenius, and Colorveil."
+  },
+  {
+    "question": "How can students install Read&Write on their personal device?",
+    "answer": "Students can download the software from Everway's website, install it, and then sign in using 'Sign in with Microsoft' and their Heriot-Watt email and password to activate it under the site licence."
+  },
+  {
+    "question": "What is the purpose of the 'Study Toolkit'?",
+    "answer": "The Study Toolkit provides resources to help students study effectively, covering key academic areas like reading, note-taking, referencing, exam revision, and presentations, as well as introducing study support software."
+  },
+  {
+    "question": "What apps are recommended for organisation and planning?",
+    "answer": "Recommended apps for organisation and planning include Microsoft To Do and Notion."
+  },
+  {
+    "question": "What wellbeing apps are suggested for students?",
+    "answer": "Suggested wellbeing apps include Smiling Mind and Insight Timer for mindfulness, and Nike Training Club for fitness."
+  },
+  {
+    "question": "What is the 'Autism - Tools for success' toolkit?",
+    "answer": "This toolkit provides support and information for autistic students on preparing for university, what to expect in the first few weeks, maintaining wellbeing, and understanding learning and teaching methods."
+  },
+  {
+    "question": "What is the Autism Transition Event at the Edinburgh Campus?",
+    "answer": "It is a two-day event run the week before Welcome Week, offering students an opportunity to come onto campus, meet key staff, and visit different areas where they will be studying."
+  },
+  {
+    "question": "What is a Personal Care Plan (PCP)?",
+    "answer": "A PCP is an individual evacuation plan tailored to a student's specific needs, providing information on what to do during an emergency evacuation."
+  },
+  {
+    "question": "What is the role of a School Disability Contact (SDC)?",
+    "answer": "An SDC liaises with academic staff to ensure that recommended support and adjustments for disabled students are put in place. They can also advocate on behalf of the student."
+  },
+  {
+    "question": "Who is the School Disability Contact for Computer Science?",
+    "answer": "Tessa Berg is the School Disability Contact for Computer Science, Software Engineering, Information Systems, and Graduate Apprenticeships in the School of Mathematical and Computer Sciences."
+  },
+  {
+    "question": "What support is available for students with unseen disabilities like diabetes or epilepsy?",
+    "answer": "Support can include easy access to toilet facilities, exam and coursework adjustments, parking permits, assistive software, and allowances for food, drink, or medication in lectures or exams."
+  },
+  {
+    "question": "How can students contact a Student Success Advisor at the Edinburgh Campus?",
+    "answer": "Students can attend a drop-in from 12.00 to 13.00, Monday to Friday, book an appointment through the myHWU Student Portal, or email studentsuccess@hw.ac.uk."
+  },
+  {
+    "question": "What is 'Watt's On: Wellbeing'?",
+    "answer": "Watt's On: Wellbeing is a series of events giving students the opportunity to take a break from university life to focus on their physical and mental wellbeing, and to meet other students and support staff."
+  },
+  {
+    "question": "What are the daily drop-in times for Student Success Advisors?",
+    "answer": "Student Success Advisors hold drop-ins from 12.00 to 13.00, Monday to Friday during the September and January semesters."
+  },
+  {
+    "question": "What is the Togetherall service?",
+    "answer": "Togetherall is an online platform providing 24/7 anonymous peer and professional support. It offers a safe space to explore feelings and learn how to improve and self-manage mental health and wellbeing."
+  },
+  {
+    "question": "What is the 'Permission to audio-record lectures' adjustment?",
+    "answer": "This adjustment allows students to audio-record lectures with their own equipment. Students must sign a form agreeing that the recordings are for personal study only and not for other purposes."
+  },
+  {
+    "question": "What health and wellbeing services are available at the Malaysia Campus?",
+    "answer": "The Malaysia Campus offers student success advisors, healthcare, counselling, disability support, health and safety, and faith and belief services."
+  },
+  {
+    "question": "What support services are listed for the Orkney Campus?",
+    "answer": "The Orkney Campus provides healthcare, counselling, disability support, faith and belief, and health and safety services."
+  },
+  {
+    "question": "Where can students at the Scottish Borders Campus access free sanitary products?",
+    "answer": "Free sanitary products are available in toilet facilities across campus and can also be collected from the Jean Muir Student Village."
+  },
+  {
+    "question": "How can a student at the Scottish Borders Campus arrange counselling?",
+    "answer": "Students can arrange counselling by emailing sbc.wellbeing@hw.ac.uk to discuss their needs and arrange a meeting. They will then be referred to the Student Counselling Service."
+  },
+  {
+    "question": "Who is the contact for the Disability Service at the Scottish Borders Campus?",
+    "answer": "Gillian McLaughlin is the Student Advisor for the Disability Service at the Scottish Borders Campus. She can be contacted at G.McLaughlin@hw.ac.uk."
+  },
+  {
+    "question": "What Muslim worship facilities are available at the Scottish Borders Campus?",
+    "answer": "The Scottish Borders Campus has a prayer room for Muslim students. There is no mosque in Galashiels, but students can contact the Borders Islamic Society for more information."
+  },
+  {
+    "question": "What should a student at the Scottish Borders Campus do in case of a fire?",
+    "answer": "Students should familiarise themselves with the emergency procedures for the Scottish Borders Campus, which include guidance on what to do in the event of a fire. Further information can be found in the downloadable guidance leaflet."
+  },
+  {
+    "question": "How can a student at the Scottish Borders Campus register with a doctor?",
+    "answer": "Students should register with a local general practice as soon as possible. They can search for a medical practice near their home using the Services Directory on the NHS Inform website."
+  },
+  {
+    "question": "What wellbeing activities are available at the Scottish Borders Campus?",
+    "answer": "The campus offers wellbeing activities such as a mindfulness group, which meets every two weeks during term-time to help students manage worry, stress, or runaway thoughts."
+  },
+  {
+    "question": "What is the deadline for submitting a mitigating circumstances application for Semester 1 2025?",
+    "answer": "The deadline for undergraduate and postgraduate coursework and examination mitigating circumstances applications for Semester 1 (8 September – 17 December) is Friday 19 December 2025."
+  },
+  {
+    "question": "What evidence is required for a mitigating circumstances application?",
+    "answer": "Students must provide independent documentary evidence, such as medical certificates. If unable to obtain evidence and the affected period is no more than seven days, a self-certification form can be submitted."
+  },
+  {
+    "question": "How can a student request a change of personal tutor?",
+    "answer": "Students can request a change of personal tutor by making an enquiry via AskHWU on the myHWU student portal."
+  },
+  {
+    "question": "Can a personal tutor proof-read a student's essay?",
+    "answer": "No. A personal tutor can advise on approaching writing an essay and help access support in academic writing, but they cannot offer a proof-reading service."
+  },
+  {
+    "question": "What is a Temporary Suspension of Studies (TSS)?",
+    "answer": "A Temporary Suspension of Studies is when a student stops studying at the University for an extended period, usually no longer than one academic year, due to medical, personal, financial reasons, or military service."
+  },
+  {
+    "question": "How can a student apply for a Temporary Suspension of Studies?",
+    "answer": "Students can apply for a TSS through Student Self Service. On the Student menu, under Programme & Course, click the Temporary Suspension of Studies link to make an application and upload evidence."
+  },
+  {
+    "question": "What is the Thomas and Margaret Roddan Trust Hardship Award?",
+    "answer": "It is an award of between £100 and £1000 for students who require financial help to alleviate unfortunate or unexpected circumstances, such as health conditions, study equipment, accommodation, or food."
+  },
+  {
+    "question": "What is the Heriot-Watt University Expenses Bursary?",
+    "answer": "It is a bursary of up to £525 to help students cover costs such as purchasing a laptop, paying for WiFi access, or travel expenses. It is open to eligible widening access students."
+  },
+  {
+    "question": "What is the Heriot-Watt Widening Access Bursary (Scotland)?",
+    "answer": "It is an award of £1,000 per year for new Scottish undergraduate students from widening participation backgrounds to help with living costs."
+  },
+  {
+    "question": "When is the UCAS deadline for 2026 undergraduate applications?",
+    "answer": "UCAS applicants for 2026 entry should ensure their applications arrive by 18:00 (UK time) on 14 January 2026."
+  },
+  {
+    "question": "What is a 'priority postcode' in the context of widening access?",
+    "answer": "In Scotland, a priority postcode is often referred to as an MD20 or MD40 postcode, which indicates the most deprived areas. Students living in these areas may be eligible for minimum or adjusted entry offers."
+  },
+  {
+    "question": "What is the definition of a 'care experienced' student?",
+    "answer": "Care experienced applies to anyone who has been or is currently in care or from a looked after background at any stage of their life, no matter how short. This includes residential care, foster care, kinship care, or adopted children who were previously looked after."
+  },
+  {
+    "question": "What accommodation support is available for care experienced students?",
+    "answer": "The University guarantees year-round accommodation to any care experienced students who need it for the duration of their studies."
+  },
+  {
+    "question": "What is the Associate Student Scheme?",
+    "answer": "The Associate Student Scheme provides an alternative route into degree programmes. Students study for one or two years at college and then enter year two or three of a related degree at Heriot-Watt."
+  },
+  {
+    "question": "What is the definition of an estranged student?",
+    "answer": "An estranged student is a young person under 25 at the start of their programme who no longer has the support of their family due to a complete and ongoing breakdown in the relationship, leading to ceased contact and withdrawal of financial and emotional support."
+  },
+  {
+    "question": "What financial support is available for estranged students?",
+    "answer": "Estranged students may be eligible for the Heriot-Watt Access Bursary, the Expenses Bursary, and priority access to hardship funds. SAAS also provides bursaries for estranged students."
+  },
+  {
+    "question": "What is the definition of a student carer?",
+    "answer": "A student carer is anyone who cares, unpaid, for a friend or family member who due to illness, disability, a mental health problem or an addiction cannot cope without their support."
+  },
+  {
+    "question": "What award did Heriot-Watt receive from Carers Trust Scotland?",
+    "answer": "The University received the Going Higher for Student Carers Recognition Award in March 2020 from Carers Trust Scotland."
+  },
+  {
+    "question": "How does Heriot-Watt define academic integrity?",
+    "answer": "Heriot-Watt adopts the ICAI definition: 'A commitment, even in the face of adversity, to six fundamental values: honesty, trust, fairness, respect, responsibility and courage'."
+  },
+  {
+    "question": "Where can students find information about how their personal data is used?",
+    "answer": "Students can view the Privacy Notices for current students, prospective students, and others on the Privacy and your data rights pages on the University website."
+  },
+  {
+    "question": "How can students access online library resources?",
+    "answer": "Students need their Heriot-Watt username and password to access most online resources. Help is available in the Skills Hub Guide: Accessing online resources."
+  },
+  {
+    "question": "What study spaces are available in the Edinburgh Campus Library?",
+    "answer": "The library offers open seating, silent study areas, group study rooms, digital studios, and accessible rooms arranged over four floors."
+  },
+  {
+    "question": "How can students contact SafeGuarding Services?",
+    "answer": "Students can contact SafeGuarding Services 24/7 via the SafeZone app, red phones around campus, by phone at 0131 451 3500, or by email at SafeGuarding@hw.ac.uk."
+  },
+  {
+    "question": "What is the SafeZone app?",
+    "answer": "SafeZone is a free app that allows students and staff to send a location-based alert to SafeGuarding Services whenever they need an immediate emergency response, first-aid, or any other general assistance."
+  },
+  {
+    "question": "What should a student do if they need first aid on campus?",
+    "answer": "Students can tap the First Aid button in the SafeZone app to send an alert to SafeGuarding Services. A SafeGuarding Officer will call them to determine how best to respond."
+  },
+  {
+    "question": "What support is available for students with care experience at the Edinburgh campus?",
+    "answer": "Emma Smail, Student Wellbeing and Transition Advisor, is the named point of contact. Students can email wpwellbeing@hw.ac.uk for support."
+  },
+  {
+    "question": "What is the Care Experienced Accommodation Grant?",
+    "answer": "It is a grant from SAAS of up to £105 per week during the summer holiday to help care experienced students with accommodation costs."
+  },
+  {
+    "question": "What is the Heriot-Watt pledge to estranged students?",
+    "answer": "The University signed the Stand Alone Pledge to continually improve support for current and future estranged students. They continue to honour the legacy of Stand Alone and the pledge made."
+  },
+  {
+    "question": "What is the deadline for an academic transcript request for records created prior to 2011?",
+    "answer": "For records created prior to 2011, the processing time is a minimum of 10 to 14 working days."
+  },
+  {
+    "question": "Does the University provide a grade point average (GPA) on transcripts?",
+    "answer": "No. The academic transcript shows results as grades (A, B, C, etc.). The university does not provide a grade point average."
+  }
+]

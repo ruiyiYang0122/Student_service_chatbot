@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Is the accommodation at Edinburgh campus self-catered or catered?",
+    "ground_truth": "All accommodation at the Edinburgh campus is self-catered, single occupancy, and mixed gender."
+  },
+  {
+    "question": "What facilities are near the Edinburgh campus accommodation?",
+    "ground_truth": "Nearby facilities include Oriam Sports Centre, the Students' Union, the Chaplaincy, a Muslim prayer room, cafés, various catering outlets, a shop, a Health Service, and a Dentist."
+  },
+  {
+    "question": "Do students living on the Edinburgh campus need to pay for utilities or transport?",
+    "ground_truth": "No, living on campus means you don't have to worry about utility bills or travel expenses, and you're only minutes away from your lectures."
+  },
+  {
+    "question": "How many residential places are available at the Edinburgh campus?",
+    "ground_truth": "The Edinburgh campus provides 2,000 residential places."
+  },
+  {
+    "question": "What types of rooms are available at Edinburgh campus accommodation?",
+    "ground_truth": "Sorry, I don't have detailed information about specific room types. I recommend checking the university accommodation website or contacting the accommodation office for the latest room options."
+  },
+  {
+    "question": "What laundry facilities are available in the accommodation?",
+    "ground_truth": "Each hall of residence has laundry facilities including washing machines, dryers, an iron, and an ironing board."
+  },
+  {
+    "question": "Is there bicycle storage on campus?",
+    "ground_truth": "Yes, each hall of residence has bike shelters."
+  },
+  {
+    "question": "What is the Residence Life team?",
+    "ground_truth": "The Residence Life team is a friendly group who help students settle in and sort out any problems you might encounter during your time living on campus."
+  },
+  {
+    "question": "Is there 24-hour emergency assistance on campus?",
+    "ground_truth": "Yes, there is 24-hour SafeGuarding on campus to assist with more urgent issues."
+  },
+  {
+    "question": "When can I apply for accommodation at the Edinburgh campus?",
+    "ground_truth": "You can apply for accommodation once you hold a Conditional Firm or an Unconditional Firm offer to study at Heriot-Watt University."
+  },
+  {
+    "question": "Do I need to choose preferences when applying for accommodation?",
+    "ground_truth": "Yes, when applying you will be asked to select your first and second preference of accommodation type."
+  },
+  {
+    "question": "Will first-year students be placed with other students from different years?",
+    "ground_truth": "First-year students are placed in accommodation with other new first-years or direct entry students."
+  },
+  {
+    "question": "Does the university guarantee accommodation for all new students?",
+    "ground_truth": "The University guarantees to make an offer for accommodation to all eligible first-year undergraduate students. Please check the accommodation guarantee page for full eligibility details."
+  },
+  {
+    "question": "Can students at the Scottish Borders campus apply for Edinburgh campus accommodation?",
+    "ground_truth": "No, students from the Scottish Borders campus are not eligible to stay at the Edinburgh Campus. They should look into the Jean Muir Student Village instead."
+  },
+  {
+    "question": "What is the contact email for the Accommodation Office?",
+    "ground_truth": "The Accommodation Office email is halls@hw.ac.uk."
+  },
+  {
+    "question": "What are the contact details for the Disability Service?",
+    "ground_truth": "The Disability Service email is disability@hw.ac.uk, and the phone number is +44 (0) 131 451 3386."
+  },
+  {
+    "question": "Who should I contact for non-student accommodation enquiries?",
+    "ground_truth": "For non-student accommodation enquiries, please email conference@hw.ac.uk."
+  },
+  {
+    "question": "What is the application process for Edinburgh campus accommodation?",
+    "ground_truth": "Once you have your offer, you can apply online. You will need to select your accommodation preferences, and then you will be placed with other new students. For detailed steps, please refer to the accommodation application guide."
+  },
+  {
+    "question": "Is the accommodation mixed gender?",
+    "ground_truth": "Yes, all accommodation is mixed gender."
+  },
+  {
+    "question": "Are there kitchens in the halls?",
+    "ground_truth": "Since the accommodation is self-catered, there are usually kitchen facilities either in each flat or on each floor. However, for specific details, please check the room descriptions or contact the Accommodation Office."
+  },
+  {
+    "question": "How long is the accommodation contract?",
+    "ground_truth": "I'm sorry, but I don't have information about the contract length. Please refer to your accommodation contract or contact the Accommodation Office for details."
+  },
+  {
+    "question": "Can I check in early?",
+    "ground_truth": "I don't have information about early check-in. It's best to contact the Accommodation Office directly to ask about early arrival options."
+  },
+  {
+    "question": "How much does accommodation cost?",
+    "ground_truth": "Accommodation costs vary depending on the room type. Please check the university accommodation website for current prices."
+  },
+  {
+    "question": "How do I pay for accommodation?",
+    "ground_truth": "Payment methods may include online payment or bank transfer. Please log in to myHWU or check the payment instructions in your accommodation offer."
+  },
+  {
+    "question": "Is WiFi included in the accommodation?",
+    "ground_truth": "Campus accommodation typically includes internet access, but for specific details, please check the accommodation facilities information or contact IT support."
+  },
+  {
+    "question": "Can I bring my family to live with me?",
+    "ground_truth": "Edinburgh campus accommodation is primarily single-occupancy rooms and is not suitable for families. If you need family housing, please contact the Accommodation Office to see if other options are available."
+  },
+  {
+    "question": "Is there a curfew or gate lock time?",
+    "ground_truth": "I don't have information about curfews. Please check the accommodation handbook or ask the Residence Life team."
+  },
+  {
+    "question": "Can I have a pet in accommodation?",
+    "ground_truth": "Sorry, I don't have information about pet policies. Generally, university accommodation does not allow pets, but please confirm with the accommodation regulations."
+  },
+  {
+    "question": "What furniture is provided in the rooms?",
+    "ground_truth": "Standard rooms usually come with a bed, desk, chair, and wardrobe. For exact furnishings, please refer to the specific room type details."
+  },
+  {
+    "question": "How can I contact the Residence Life team?",
+    "ground_truth": "You can reach them through the Accommodation Office, or check your accommodation handbook for contact information. I don't have their direct contact details."
+  },
+  {
+    "question": "Do the halls have lifts?",
+    "ground_truth": "Lift availability may vary between buildings. It's best to ask the Accommodation Office or check the specific hall information."
+  },
+  {
+    "question": "How far is the accommodation from the lecture buildings?",
+    "ground_truth": "The accommodation is only a few minutes' walk from the lecture buildings."
+  },
+  {
+    "question": "I'm an exchange student. Can I apply for accommodation?",
+    "ground_truth": "Exchange students are usually eligible to apply for accommodation. For specific eligibility and procedures, please contact the Exchange Office or the Accommodation Office."
+  },
+  {
+    "question": "Can postgraduate students apply for Edinburgh campus accommodation?",
+    "ground_truth": "Yes, there are postgraduate accommodation options. Please check the postgraduate accommodation page or contact the Accommodation Office for details."
+  },
+  {
+    "question": "How do I cancel my accommodation application?",
+    "ground_truth": "Cancellation policies may depend on timing. Please contact the Accommodation Office as soon as possible to discuss cancellation procedures."
+  },
+  {
+    "question": "Is there a supermarket near the accommodation?",
+    "ground_truth": "There is a shop on campus for daily essentials. For larger supermarkets, you may need to go off-campus. You can check local transport options."
+  },
+  {
+    "question": "Is there a health centre on campus?",
+    "ground_truth": "Yes, there is a Health Service and a Dentist on campus."
+  },
+  {
+    "question": "Does the accommodation provide bedding?",
+    "ground_truth": "Bedding is usually not provided, so students need to bring their own or purchase it upon arrival."
+  },
+  {
+    "question": "Can I visit the accommodation before applying?",
+    "ground_truth": "The university holds open days where you can tour the campus and accommodation. Keep an eye on open day announcements for opportunities."
+  },
+  {
+    "question": "What security measures are in place at the accommodation?",
+    "ground_truth": "There is 24-hour SafeGuarding on campus, and halls typically have access control systems. For detailed security information, please contact the Accommodation Office."
+  },
+  {
+    "question": "I'm an international student. Are there extra steps for applying to accommodation?",
+    "ground_truth": "The application process for international students is generally the same as for home students. However, you may need to plan your arrival carefully. The International Student Office can provide additional support."
+  },
+  {
+    "question": "Is there accessible accommodation for students with disabilities?",
+    "ground_truth": "The university offers accessible accommodation. Please contact the Disability Service to discuss your specific needs, and they will help arrange a suitable room."
+  },
+  {
+    "question": "Where can I find FAQs about accommodation?",
+    "ground_truth": "You can find answers to frequently asked questions on the accommodation website's FAQ page."
+  },
+  {
+    "question": "If I'm not happy with my room allocation, can I change?",
+    "ground_truth": "Room change policies may have restrictions. Please contact the Accommodation Office to inquire about the possibility and process for a room transfer."
+  },
+  {
+    "question": "What cleaning services are provided?",
+    "ground_truth": "Usually students are responsible for cleaning their own rooms. Common areas may have regular cleaning. Please check your accommodation handbook for specifics."
+  },
+  {
+    "question": "Are overnight guests allowed?",
+    "ground_truth": "Guest policies may vary by hall. Please check the accommodation handbook or ask the Residence Life team for their policy."
+  },
+  {
+    "question": "Are there study rooms or common rooms in the accommodation?",
+    "ground_truth": "Halls may have common areas, and there are also shared spaces like the Students' Union and cafés on campus that can be used for study or relaxation."
+  },
+  {
+    "question": "I have a Conditional Firm offer. Can I apply for accommodation now?",
+    "ground_truth": "Yes, you can apply for accommodation once you hold a Conditional Firm or Unconditional Firm offer."
+  },
+  {
+    "question": "Is there a deadline for accommodation applications?",
+    "ground_truth": "To secure a place, it's recommended to apply early. Please check the accommodation application page for any specific deadlines."
+  },
+  {
+    "question": "I'm a Scottish Borders campus student. What should I do if I want to stay at Edinburgh campus?",
+    "ground_truth": "I'm sorry, but according to university policy, students from the Scottish Borders campus are not eligible for Edinburgh campus accommodation. You can apply for the Jean Muir Student Village instead, or contact the Accommodation Office to see if there are any alternative arrangements."
+  }
+]

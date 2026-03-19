@@ -1,0 +1,427 @@
+[
+  {
+    "question": "When was Heriot-Watt University founded and what is its special historical significance?",
+    "ground_truth": "Heriot-Watt University traces its roots back to 1821 in Edinburgh as the world's first mechanics institute. It was the first institution to provide scientific and technical education to ordinary working people."
+  },
+  {
+    "question": "In which year did the university celebrate its bicentenary and what activities took place?",
+    "ground_truth": "Heriot-Watt University celebrated its 200th anniversary in 2021 with a year-long programme of events and debates across its campuses and online, including the 1821 Appeal and the Panmure House Prize, to honour two centuries of innovation and education."
+  },
+  {
+    "question": "What is the phone number for Heriot-Watt's Edinburgh campus, and how should prospective students make enquiries?",
+    "ground_truth": "The Edinburgh campus main phone number is +44 (0)131 449 5111. New or future students should complete the online enquiry form on the website or chat with current students via UniBuddy."
+  },
+  {
+    "question": "How does the university handle personal information of website visitors and what is the purpose of using cookies?",
+    "ground_truth": "The university uses cookies to gather non-personal statistical information—such as page visits and browsing paths—to improve the website. This information is collected in a way that does not identify anyone and is not associated with any personally identifiable information."
+  },
+  {
+    "question": "Which browsers does the university website support, and what happens if I use an unsupported browser?",
+    "ground_truth": "The website supports the latest versions of Chrome, Edge, Firefox, and Safari. If you use an older or different browser, pages may look different and some functionality might not work properly."
+  },
+  {
+    "question": "What departments are included in the School of Social Sciences, and what are its global features?",
+    "ground_truth": "The School of Social Sciences comprises Edinburgh Business School, the Department of Languages and Intercultural Studies, the Department of Psychology, and the Department of Research Methods and Practice. It offers programmes across the Edinburgh, Dubai, and Malaysia campuses, allowing students to transfer between campuses and participate in exchange programmes with universities worldwide."
+  },
+  {
+    "question": "How does the university assure teaching quality, and what is the contact email for the Quality Assurance team?",
+    "ground_truth": "The university maintains high standards through its quality assurance framework, providing evidence to stakeholders including government, students, and employers. The Quality Assurance team can be reached at quality@hw.ac.uk or by phone at +44 (0)131 451 3732."
+  },
+  {
+    "question": "How accurate is the information on the university website, and does the university accept liability if changes cause losses?",
+    "ground_truth": "The university makes every effort to ensure accuracy, but information is regularly reviewed and subject to change. Users are responsible for checking facts before making any commitments, and the university accepts no legal liability for losses arising from the use of website information."
+  },
+
+  {
+    "question": "What are the professional services directorates at Heriot-Watt University?",
+    "ground_truth": "The professional services include: Campus Services, Finance, Governance and Legal Services, Human Resource Development, Information Services, Marketing, Recruitment and Communications, Registry Services, and Research Engagement."
+  },
+  {
+    "question": "What are the main responsibilities of the Senate?",
+    "ground_truth": "The Senate is responsible for the regulation and promotion of learning and teaching, research, knowledge exchange, and scholarship at the University. Its powers include regulating admissions, conducting examinations, authorising the granting of degrees, overseeing academic library and information services, recommending the establishment of academic units, and regulating student discipline."
+  },
+  {
+    "question": "What are some of the main university committees? Can you list a few?",
+    "ground_truth": "The university has numerous committees, such as the Animal Welfare and Ethical Review Body, Audit and Risk Committee, Athena SWAN Strategy Committee, Court, Finance Committee, Global Equality, Diversity and Inclusion Committee, Senate, University Committee for Learning and Teaching, and University Research Ethics Committee. A full list is available on the university website."
+  },
+  {
+    "question": "How do I connect to the campus WiFi at Heriot-Watt University?",
+    "ground_truth": "Students and staff can use the eduroam wireless service. On first connection, select the 'HWU WiFi setup' network, follow the automatic configuration tool, and enter your username (format abc123@hw.ac.uk) and password. If you encounter issues, manual setup instructions are available on the IT services page."
+  },
+  {
+    "question": "How can I find books or academic resources in the library?",
+    "ground_truth": "You can use the Discovery tool to search the library catalogue, e-books, journal articles, and newspapers. Login with your Heriot-Watt username and password. Additionally, the Skills Hub Guide: Resources provides information on the full range of resources available and how to use them."
+  },
+  {
+    "question": "Where can I check the library opening hours?",
+    "ground_truth": "Library opening hours can be found on the 'Opening Hours' page on the Information Services website, or by contacting the Information Services department."
+  },
+  {
+    "question": "How do I contact the university's Heritage and Information Governance team?",
+    "ground_truth": "You can email heritage@hw.ac.uk or call +44 (0) 131 451 3218. The archivist is Helen Taylor, reachable at h.e.taylor@hw.ac.uk."
+  },
+  {
+    "question": "I would like to book an appointment with a Learning Advisor or Liaison Librarian. How do I do that?",
+    "ground_truth": "You can contact the IS Helpdesk to schedule an appointment, or book directly through the Subject Guides."
+  },
+  {
+    "question": "How do I access online resources at Heriot-Watt University?",
+    "ground_truth": "You need to log in with your Heriot-Watt username and password. Most online resources can be accessed via Discovery search. For further help, please refer to the Skills Hub Guide: Accessing Online Resources."
+  },
+  {
+    "question": "How many items can students borrow at the Edinburgh or Scottish Borders campuses?",
+    "ground_truth": "At the Edinburgh and Scottish Borders campuses, Heriot-Watt staff and students can borrow up to 30 items. External members can borrow up to 10 items."
+  },
+  {
+    "question": "How do I renew library items? Will they be renewed automatically?",
+    "ground_truth": "Standard loan and week loan items are automatically renewed the day before they are due, unless your account is blocked, the item is requested, or the maximum renewal period has been reached. You can also renew items manually by logging into your Discovery account."
+  },
+  {
+    "question": "Are there fines for overdue library items? How much are they?",
+    "ground_truth": "Yes, fines are charged for overdue items. Standard loans have a 3-day grace period, then 20p per day, with a maximum fine of £10 per item. Week loans have no grace period and are 30p per day. Short 3-hour loans are 2p per minute."
+  },
+  {
+    "question": "How can I book a group study room in the Edinburgh campus library?",
+    "ground_truth": "The Edinburgh campus library has five group study rooms and six digital study studios, which can be booked in advance through the Resource Booker system."
+  },
+  {
+    "question": "Where can I find library opening hours?",
+    "ground_truth": "Library opening hours for each campus can be found on the Opening Hours page of the Information Services website. Select your campus for detailed information."
+  },
+  {
+    "question": "What is the interlibrary loan service and how do I request it?",
+    "ground_truth": "The interlibrary loan service helps you obtain books, journal articles, or publications not available in your local library. You need to complete an interlibrary loan application form. Please note that due to the British Library cyber incident, there may be delays."
+  },
+  {
+    "question": "Can I borrow books from another campus library?",
+    "ground_truth": "Yes. Users based at Edinburgh and Scottish Borders campuses can request items held at each other's campus, and the item will be sent to your campus library. Malaysia and Dubai campus users can submit a Clio interlibrary loan request to receive scanned chapters from UK campus items."
+  },
+  {
+    "question": "Where can I find the opening hours for the Dubai library?",
+    "ground_truth": "Dubai Library opening hours can be found in the document 'Dubai Library Opening Hours 2025 26' (PDF, 216.8KB)."
+  },
+  {
+    "question": "Is the Edinburgh campus library open 24 hours during semester?",
+    "ground_truth": "Yes, the Edinburgh Campus Library is open 24/7 during semester 1 and semester 2."
+  },
+  {
+    "question": "Are the Malaysia library opening hours subject to change?",
+    "ground_truth": "Yes, all opening hours at the Malaysia library are currently subject to change at short notice. Users are advised to check Instagram (@hwumisnews) for updates."
+  },
+  {
+    "question": "What are the Orkney library opening hours? Do I need to book a study space in advance?",
+    "ground_truth": "The Orkney campus library is open from 9am to 6pm. Students must book a study space in advance using Resource Booker."
+  },
+  {
+    "question": "How can I get the latest opening information for the Scottish Borders Campus library?",
+    "ground_truth": "You can check the Information Services Instagram feed for daily updates, or contact the Library Service Desk by email (SBCservicedesk@hw.ac.uk) or phone (+44 1896 892 185)."
+  },
+  {
+    "question": "How can teaching staff recommend books for their courses? What information is required?",
+    "ground_truth": "Teaching staff should send reading lists to the campus library (e.g., DubaiLibHelp@hw.ac.uk, libord@hw.ac.uk) including course title/code, item details (author, title, ISBN, etc.), number of students, whether it's a core text, and preference for eBook or print. Lists should be submitted early before semester starts."
+  },
+  {
+    "question": "Can students at UK campuses use other university libraries?",
+    "ground_truth": "Yes, HWU students in the UK can access other university and public libraries through the SCONUL access scheme. This applies to Edinburgh, Scottish Borders, and Orkney campuses. There are currently no such arrangements in UAE or Malaysia."
+  },
+  {
+    "question": "Who can I contact for research support enquiries?",
+    "ground_truth": "You can contact Linda Kerr (Research Support Librarian) at l.kerr@hw.ac.uk, Lesa Ng (Research Support Advisor) at lesa.ng@hw.ac.uk, or other team members listed on the Research Support page."
+  },
+  {
+    "question": "What is research impact according to the LSE Public Policy Group?",
+    "ground_truth": "Research impact is a recorded or otherwise auditable occasion of influence from academic research on another actor or organization. It includes academic impacts (influences upon actors in academia as measured by citations) and external impacts (influences on business, government or civil society as measured by references in trade press, government documents, or mass media coverage)."
+  },
+  {
+    "question": "What does a journal Impact Factor of 1.0 mean?",
+    "ground_truth": "A journal impact factor of 1.0 means that on average, articles published in that journal one or two years ago have been cited once."
+  },
+  {
+    "question": "What is the h-index and how is it calculated?",
+    "ground_truth": "The h-index is a measure of the impact of an individual's publishing, based on a list of publications ranked in descending order by the Times Cited. The value of h is equal to the number of papers (N) in the list that have N or more citations."
+  },
+  {
+    "question": "Who can access Pure, the University's research information system?",
+    "ground_truth": "Currently, access to Pure is available only to research academic members of staff. Research Associates who would like access should contact their School Research Administrators. PGRs do not have profiles in Pure at this stage."
+  },
+  {
+    "question": "What is the RCUK guideline for how long research data should be kept after publication?",
+    "ground_truth": "RCUK guidelines state that data which underpins findings in publications should be accessible for at least ten years after publication. Data related to potential future legal liabilities may need to be stored for substantially longer."
+  },
+  {
+    "question": "What tool should researchers use to create a data management plan?",
+    "ground_truth": "Researchers should use the JISC tool DMPOnline to create their research data management plan. They can log in using their Heriot-Watt ID. The tool allows them to create funder-specific plans, export as PDF, and edit online."
+  },
+  {
+    "question": "Where should research data be stored at Heriot-Watt University?",
+    "ground_truth": "The University provides a managed network drive for research called the R: drive, which offers data security, replication in separate data centres, automated backup, and file recovery. Space can be allocated to research groups or individuals by contacting IShelp."
+  },
+  {
+    "question": "What should researchers consider regarding ethical and legal issues when planning research data management?",
+    "ground_truth": "Researchers should consider whether they have gained consent for data preservation and sharing, how sensitive data will be handled securely, how participant identity will be protected (e.g., through anonymisation), and whether there are any knowledge transfer or commercial opportunities. Advice on legal issues can be obtained from Information Governance."
+  },
+  {
+    "question": "What are the requirements for sharing research data associated with UKRI-funded publications?",
+    "ground_truth": "UKRI-funded research papers must include a short statement describing how and on what terms any supporting research data may be accessed. Data associated with publications should be deposited in Pure or in the repository specified by the funder."
+  },
+  {
+    "question": "What license is commonly used for research data, and what does CC BY-NC mean?",
+    "ground_truth": "Creative Commons licenses are commonly used for research data. CC BY-NC (Attribution-NonCommercial) means that anyone can use your data as long as they attribute you and do not use it for commercial purposes."
+  },
+  {
+    "question": "Who should I contact as a first point of contact for research data management advice within my School?",
+    "ground_truth": "As a first point of contact, you should contact Research Administrators within your School for general advice on data management and creating a data management plan. Research Data Champions can also provide advice."
+  },
+  {
+    "question": "Where should I deposit research data supporting published findings?",
+    "ground_truth": "Data supporting published findings should be deposited in Heriot-Watt University's institutional data repository, Pure, unless a funder specifies that you should use a specific repository. A DOI can be generated in Pure to provide a persistent link to the data."
+  },
+  {
+    "question": "How can I find a recommended data repository for my subject area?",
+    "ground_truth": "You can check if there is a recommended data repository for your subject or funder using the Registry of Research Data Repositories (re3data.org)."
+  },
+  {
+    "question": "What resources does the Library provide to support research?",
+    "ground_truth": "The Library provides access to books, journals, conference proceedings and other materials. The Discovery service searches across databases including the Library catalogue, and specialist databases are also available. Subject Guides help identify relevant resources for your specialism."
+  },
+  {
+    "question": "Where can I find full-text copies of Heriot-Watt University PhD theses?",
+    "ground_truth": "Full-text copies of Heriot-Watt University PhD theses awarded from 2009 onwards are available in the ROS Theses Repository."
+  },
+  {
+    "question": "What support does the Research Development team provide to researchers?",
+    "ground_truth": "The Research Development team provides support to develop, construct and cost research proposals, including information on funding policy and opportunities, running events, supporting proposal development with mock panels and interviews, coordinating internal selection, and providing support on submission systems and approvals. They can be contacted at researchdevelopment@hw.ac.uk."
+  },
+  {
+    "question": "What statement must UKRI-funded research papers include regarding research data?",
+    "ground_truth": "UKRI-funded research papers must include a short statement describing how and on what terms any supporting research data may be accessed."
+  },
+  {
+    "question": "What online tool does the Digital Curation Centre provide for creating data management plans?",
+    "ground_truth": "The Digital Curation Centre provides the DMPOnline tool for creating data management plans."
+  },
+  {
+    "question": "Where should data supporting published findings be deposited at Heriot-Watt University?",
+    "ground_truth": "Data supporting published findings should be deposited in Heriot-Watt University's institutional data repository, Pure, unless a funder specifies a specific repository."
+  },
+  {
+    "question": "What is re3data.org?",
+    "ground_truth": "re3data.org is the Registry of Research Data Repositories, where you can find recommended data repositories for your subject or funder."
+  },
+  {
+    "question": "What tool can be used to search across a range of databases including the Library catalogue?",
+    "ground_truth": "The Discovery service searches across a range of databases, including the main Library catalogue, for journal articles, ebooks, proceedings, market research reports and news items."
+  },
+  {
+    "question": "Where can full-text copies of Heriot-Watt University PhD theses awarded from 2009 onwards be found?",
+    "ground_truth": "They are available in the ROS Theses Repository."
+  },
+  {
+    "question": "What are the key goals of the Marketing and Communications Directorate?",
+    "ground_truth": "To enhance the reputation of Heriot-Watt University; lead on building the brand; deliver demonstrably professional marketing, communication, design and print services."
+  },
+  {
+    "question": "What are the three principal elements of the governance of Heriot-Watt University?",
+    "ground_truth": "The Court, the Principal and Vice-Chancellor, and the Senate."
+  },
+  {
+    "question": "Who is the Pro-Chancellor for the Malaysia Campus?",
+    "ground_truth": "Datuk (Dr) Nicol Ann David was appointed Pro-Chancellor Malaysia on 17 May 2024."
+  },
+  {
+    "question": "Who are the key management personnel at Heriot-Watt University?",
+    "ground_truth": "The Principal and Vice-Chancellor (Professor Richard A Williams), the Vice-Principal, Provost and Deputy Vice-Chancellor (Professor Steve McLaughlin), and the University Secretary (Ms Ruth Moir)."
+  },
+  {
+    "question": "What is the name of Heriot-Watt's strategic plan for 2019–2025?",
+    "ground_truth": "\"Shaping Tomorrow Together\"."
+  },
+  {
+    "question": "What support is available for applicants who require reasonable adjustments during the application process?",
+    "ground_truth": "They can contact jobssupport@hw.ac.uk for support."
+  },
+  {
+    "question": "What benefits are offered to employees at the Malaysia campus?",
+    "ground_truth": "Relocation allowance, access to Employees Provident Fund, medical insurance for employee and eligible children and non-working spouse, work permit, 43 days annual leave, parking."
+  },
+  {
+    "question": "How much money has the 1821 Appeal raised as of August 2022?",
+    "ground_truth": "Over £4.3 million."
+  },
+  {
+    "question": "Does the Student Shop offer a meal deal?",
+    "ground_truth": "Yes, the Student Shop offers a meal deal: a drink, sandwich, and bag of crisps for £3.49."
+  },
+  {
+    "question": "What awards has the Research Futures Academy won?",
+    "ground_truth": "It has won an ARMA award for Public Engagement and Advocacy, the HR Excellence in Research Award from the European Commission, and the Times Higher Education Award for Leadership and Management."
+  },
+  {
+    "question": "When was Heriot-Watt University founded?",
+    "ground_truth": "Heriot-Watt University traces its roots back to 1821, when it was founded as the world's first mechanics institute in Edinburgh."
+  },
+  {
+    "question": "What is the role of the Senate at Heriot-Watt University?",
+    "ground_truth": "The Senate is responsible for the regulation and promotion of learning and teaching, research, knowledge exchange, and scholarship at the University. It oversees academic standards and awards."
+  },
+  {
+    "question": "How do I connect to the university WiFi?",
+    "ground_truth": "You can connect to the eduroam wireless service. On first connection, select the 'HWU WiFi setup' network and follow the automatic configuration tool. Use your username in the format abc123@hw.ac.uk and your password. For detailed instructions, please check the IT services page."
+  },
+  {
+    "question": "How many items can I borrow from the Edinburgh campus library?",
+    "ground_truth": "HWU staff and students can borrow up to 30 items from the Edinburgh and Scottish Borders campus libraries. External members can borrow up to 10 items."
+  },
+  {
+    "question": "Does Heriot-Watt University have a research data management policy?",
+    "ground_truth": "Yes, the University has a Research Data Management Policy, which provides guidance to all staff and students on good research data management practice. You can find the full policy in the document library."
+  },
+  {
+    "question": "What is open access publishing?",
+    "ground_truth": "Open access publications are those freely available online, published with the permission of the copyright holder. There are two main routes: Gold Open Access (through journal websites, often with an Article Processing Charge) and Green Open Access (through an institutional repository like Pure)."
+  },
+  {
+    "question": "What benefits are offered to staff at the Dubai campus?",
+    "ground_truth": "Benefits include relocation and settling-in allowance, comprehensive medical insurance, UAE visa and work permit facilitation, generous leave entitlements (43 days annual leave), end-of-service gratuity, tax-free salaries, and an educational allowance contribution for employees' children."
+  },
+  {
+    "question": "How can I book a group study room in the Dubai library?",
+    "ground_truth": "You can book a group study room through your student MS Outlook. Create a new meeting, provide a title, select room 2.31 to 2.36 in the location, choose your date and time (maximum one hour per day), and send. You'll receive an email confirmation upon approval."
+  },
+  {
+    "question": "What is Heriot-Watt University's Strategy 2025?",
+    "ground_truth": "Strategy 2025, titled 'Shaping Tomorrow Together', is the University's strategic plan focused on four themes: building flourishing communities, pioneering in education, excelling in research and enterprise, and being a global, connected university."
+  },
+  {
+    "question": "What is the Mary Burton Project?",
+    "ground_truth": "The Mary Burton Project aims to increase the number of women enrolling in STEM courses by working with local schools to provide support, role models, and corporate exposure. It also includes a four-year scholarship programme for 40 women in STEM subjects."
+  },
+  {
+    "question": "What tool should I use to create a data management plan?",
+    "ground_truth": "You should use the JISC tool DMPOnline to create your research data management plan. You can log in with your Heriot-Watt ID and select your funder's template."
+  },
+  {
+    "question": "What are some of the main committees at Heriot-Watt University?",
+    "ground_truth": "Main committees include the Court, Senate, Audit and Risk Committee, Finance Committee, Research Degrees Committee, University Committee for Learning and Teaching, and many others. A full list is available on the university website."
+  },
+  {
+    "question": "What catering options are available at the Edinburgh campus?",
+    "ground_truth": "The Edinburgh campus has several catering outlets including Central (food court), Elements (made-to-order sandwiches), Café Brio (continental style), The Piece (Starbucks), Dewey's (Costa Coffee), Bistro 1776, and Da Vinci's. The Students' Union also operates The Student Shop, Liberties café, and Geordies bar."
+  },
+  {
+    "question": "Where should I store my research data?",
+    "ground_truth": "The University provides a managed network drive for research called the R: drive, which offers data security, automated backup, and file recovery. You should contact IShelp to discuss your storage requirements. Personal devices and third-party cloud services should not be used for the only copy of research data."
+  },
+  {
+    "question": "How can I contact the university archives?",
+    "ground_truth": "You can contact the Heritage and Information Governance team by email at heritage@hw.ac.uk or by phone at +44 (0) 131 451 3218. The archivist is Helen Taylor, reachable at h.e.taylor@hw.ac.uk."
+  },
+  {
+    "question": "Who should I contact for disability support?",
+    "ground_truth": "You can contact the Disability Service by email at disability@hw.ac.uk or by phone at +44 (0) 131 451 3386. They can assist with accessible accommodation and other support needs."
+  },
+  {
+    "question": "Who is Emma Guion Akdağ and what is her role at Heriot-Watt University?",
+    "answer": "Emma Guion Akdağ is an Assistant Professor at Heriot-Watt University. She works at the Edinburgh campus within the School of Social Sciences, specifically in the Department of Languages & Intercultural Studies."
+  },
+  {
+    "question": "What is the GRID ecosystem mentioned on the research and enterprise page?",
+    "answer": "GRID stands for Global Research Innovation Discovery. It is Heriot-Watt University's ecosystem that unites global challenges, impactful Research, enterprising Innovation, and universal Discovery to shape global change effectively."
+  },
+  {
+    "question": "How much of Heriot-Watt's research was ranked as world-leading or internationally excellent in the most recent Research Excellence Framework (REF)?",
+    "answer": "According to the Research Excellence Framework 2021, 86.8% of Heriot-Watt's research is ranked as world-leading and internationally excellent."
+  },
+  {
+    "question": "I'm feeling anxious about my upcoming exams. What advice does the Student Wellbeing Service offer for during an assessment?",
+    "answer": "The Student Wellbeing Service recommends that if you feel anxious during an exam, you should pause for a moment and breathe."
+  },
+  {
+    "question": "Where can I find free sanitary products on the Edinburgh campus?",
+    "answer": "Free sanitary products are available in various locations, including toilet facilities. You can also collect them from the Student Union Advice Hub in the Hugh Nisbet Building and the Residence Life Hub in Cristina Miller West."
+  },
+  {
+    "question": "I am an international student and have a question about my visa. How can I contact the Visa Advice and Compliance (VAC) team?",
+    "answer": "The main way to contact the VAC team is through the Student Portal by raising an enquiry via AskMyHW. You can also book a face-to-face or online appointment through your Student Portal."
+  },
+  {
+    "question": "What are the drop-in times for the Visa Advice team during term time?",
+    "answer": "During term time, the drop-in sessions are held on Monday, Wednesday, and Friday from 14:00 to 16:00. No booking is required."
+  },
+  {
+    "question": "I'm thinking about transferring to another campus. Which programme should I look into?",
+    "answer": "You should look into the 'Go Global' programme, which is the inter-campus transfer programme available only for Heriot-Watt students."
+  },
+  {
+    "question": "Where can I find my teaching timetable?",
+    "answer": "You can find your teaching timetable on the 'Manage your studies' section of the university website, under 'Teaching timetables'."
+  },
+  {
+    "question": "I need help improving my academic writing skills. What free resources are available?",
+    "answer": "There are several resources: the Skills Hub provides guides and classes on academic writing. The English Gym offers free academic English tutorials and drop-in sessions. You can also book a one-to-one consultation with the Academic Writing Centre."
+  },
+  {
+    "question": "Do I need to book an appointment to attend an English Gym drop-in session?",
+    "answer": "No, you do not. Students can self-enroll and attend any of the drop-in sessions without prior booking."
+  },
+  {
+    "question": "What is the email address for the English Gym?",
+    "answer": "The email address for the English Gym is englishgym@hw.ac.uk."
+  },
+  {
+    "question": "What is the Pre-sessional English (PSE) programme?",
+    "answer": "The Pre-sessional English programme is designed to improve your English for Academic Purposes and equip you with the study skills needed for your degree. Successful completion at the required level guarantees direct entry to your chosen degree."
+  },
+  {
+    "question": "What are the start dates for the 6-week Pre-sessional English course in 2026?",
+    "answer": "According to the provided information, the 6-week Pre-sessional English course has start dates of 06 July 2026 and 19 October 2026."
+  },
+  {
+    "question": "My IELTS score is 5.0 with no element below 4.5. Which Pre-sessional English programme would I be eligible for if I'm applying for an undergraduate degree?",
+    "answer": "With an IELTS score of 5.0 (no element below 4.5), you would be eligible for the 14-week Pre-sessional English programme."
+  },
+  {
+    "question": "I am an EU student applying to study at Heriot-Watt. What will my tuition fee status be?",
+    "answer": "If you live in the EU (other than the Republic of Ireland) and do not have settled or pre-settled status under the EU Settlement Scheme, your fee status will be an international tuition fee rate."
+  },
+  {
+    "question": "What percentage of students on the Edinburgh campus come from outside the UK?",
+    "answer": "One third of the 9,000 students on campus come from countries outside the UK."
+  },
+  {
+    "question": "Can any international education agent recruit students for Heriot-Watt University?",
+    "answer": "No, only agencies that have a signed contract with Heriot-Watt University can recruit students on its behalf."
+  },
+  {
+    "question": "How long is the standard contract for a Heriot-Watt recruitment agency partner?",
+    "answer": "All of Heriot-Watt's recruitment agency contracts are for three years."
+  },
+  {
+    "question": "I'm interested in the 3-year honours degree. How should I indicate this on my application?",
+    "answer": "To apply for a 3-year honours degree, you should select 'point of entry 2' on your application to be considered for direct entry into the second year."
+  },
+  {
+    "question": "I'm a student from the rest of the UK (England, Wales, Northern Ireland) joining Heriot-Watt. Am I eligible for any financial support?",
+    "answer": "Yes, students from the rest of the UK are eligible for a Travel Home Bursary of £1,500, which is paid in three instalments throughout your first year."
+  },
+  {
+    "question": "Under the FOI classification, which category covers information about research students?",
+    "answer": "Information about research students is covered under the '8.7 Management of research' category."
+  },
+  {
+    "question": "What kind of information is included in the 'Commercialisation and knowledge transfer' FOI category?",
+    "answer": "This category includes information about support arrangements, contact information, commercialisation funding, commercialisation resources, commercialisation outcomes, and consultancy services."
+  },
+  {
+    "question": "What is the Skills Hub and who is it for?",
+    "answer": "The Skills Hub is a collection of guides and classes to help develop essential skills like academic writing, citing, and time management. It is useful for all undergraduate and masters students."
+  },
+  {
+    "question": "I need help with citing and referencing. Where can I find guidance?",
+    "answer": "The Skills Hub provides guides and classes on citing and referencing. You can also get advice from the Academic Writing Centre or through one-to-one Academic Skills consultations."
+  },
+  {
+    "question": "My question is about the specific research data from a project. Can you help me find it?",
+    "answer": "I'm sorry, but as a student helper, my knowledge is based on general university information and resources. The results or data of specific research projects are not covered in the pages I have access to. For detailed research data, I recommend contacting the relevant school or research institute directly."
+  }
+]
