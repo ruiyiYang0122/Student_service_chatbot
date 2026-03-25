@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Evaluation Task Card — HWU AI Student Services Bot</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
+  :root {
+    --navy:   #1a2744;
+    --blue:   #2d4a8a;
+    --mid:    #4a6fb5;
+    --light:  #e8edf8;
+    --accent: #c8a94a;
+    --green:  #3a7d5a;
+    --red:    #b84040;
+    --grey1:  #f6f7fb;
+    --grey2:  #e2e5ef;
+    --grey3:  #9aa3bf;
+    --text:   #1a1f35;
+    --mono:   'IBM Plex Mono', monospace;
+    --sans:   'IBM Plex Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text);
+    background: #f0f2f8;
+    line-height: 1.5;
+  }
+
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 40px rgba(26,39,68,0.12);
+  }
+
+  /* ── Header ── */
+  .header {
+    background: var(--navy);
+    padding: 28px 40px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 40px solid rgba(200,169,74,0.15);
+  }
+  .header-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.02em;
+  }
+  .header-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    font-family: var(--mono);
+    margin-top: 4px;
+    letter-spacing: 0.08em;
+  }
+  .header-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .meta-label {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .meta-input {
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background: transparent;
+    color: white;
+    font-family: var(--mono);
+    font-size: 12px;
+    width: 120px;
+    outline: none;
+    padding: 2px 4px;
+  }
+  .meta-input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .group-select {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .group-opt {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  .group-opt input { cursor: pointer; accent-color: var(--accent); }
+  .group-opt span {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ── Scenario section ── */
+  .scenarios-wrap {
+    background: var(--navy);
+    padding: 0 40px 28px;
+    border-bottom: 3px solid var(--accent);
+  }
+  .scenarios-title {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding-top: 4px;
+    margin-bottom: 12px;
+  }
+  .scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .scenario-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .scenario-card:hover, .scenario-card.active {
+    background: rgba(200,169,74,0.15);
+    border-color: var(--accent);
+  }
+  .scenario-card.active .sc-num { color: var(--accent); }
+  .sc-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  .sc-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .sc-identity {
+    font-size: 10px;
+    font-family: var(--mono);
+    color: rgba(255,255,255,0.45);
+    line-height: 1.4;
+  }
+  .sc-tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .sc-tag {
+    font-family: var(--mono);
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Scenario detail panel ── */
+  .scenario-detail {
+    background: var(--light);
+    border-left: 4px solid var(--accent);
+    margin: 0 40px 0;
+    padding: 14px 18px;
+    display: none;
+    border-radius: 0 4px 4px 0;
+  }
+  .scenario-detail.visible { display: block; }
+  .detail-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--blue);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .detail-text {
+    font-size: 12.5px;
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .detail-focus {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .focus-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: var(--blue);
+    color: white;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Section header ── */
+  .section-hdr {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px 10px;
+    border-top: 1px solid var(--grey2);
+    margin-top: 6px;
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: white;
+    background: var(--blue);
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+  .section-mode {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 3px;
+    letter-spacing: 0.06em;
+  }
+  .mode-text  { background: #dbeafe; color: #1e40af; }
+  .mode-voice { background: #dcfce7; color: #166534; }
+  .mode-edge  { background: #fef9c3; color: #854d0e; }
+  .mode-sus   { background: #fce7f3; color: #9d174d; }
+
+  .section-body { padding: 0 40px 20px; }
+
+  /* ── 4-column record table ── */
+  .record-table-wrap { overflow-x: auto; }
+  .record-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+  .record-table th {
+    background: var(--navy);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .record-table th.scenario-col {
+    background: var(--blue);
+    min-width: 80px;
+  }
+  .record-table td {
+    border: 1px solid var(--grey2);
+    padding: 0;
+    vertical-align: top;
+  }
+  .record-table td.scenario-label {
+    background: var(--light);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--blue);
+    padding: 6px 8px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    border-right: 2px solid var(--blue);
+    writing-mode: horizontal-tb;
+  }
+  .record-table td.field-cell {
+    min-width: 160px;
+  }
+  .field-cell textarea, .field-cell input {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: vertical;
+    font-family: var(--sans);
+    font-size: 12px;
+    padding: 7px 9px;
+    background: transparent;
+    color: var(--text);
+    min-height: 52px;
+  }
+  .field-cell input {
+    min-height: auto;
+    height: 36px;
+    text-align: center;
+  }
+  .record-table tr:nth-child(even) td { background: var(--grey1); }
+  .record-table tr:nth-child(even) td.scenario-label { background: #dce4f4; }
+
+  /* ── Rating row ── */
+  .ratings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--grey1);
+    border: 1px solid var(--grey2);
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+  .rating-label {
+    font-size: 12px;
+    color: var(--text);
+    flex: 1;
+    line-height: 1.3;
+  }
+  .rating-stars {
+    display: flex;
+    gap: 4px;
+  }
+  .star-opt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .star-opt input { cursor: pointer; accent-color: var(--blue); }
+  .star-opt span {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--grey3);
+  }
+
+  /* ── Checklist ── */
+  .checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    margin-top: 10px;
+  }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 7px 10px;
+    background: var(--grey1);
+    border: 1px solid var(--grey2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .check-item:hover { background: var(--light); }
+  .check-item input { cursor: pointer; accent-color: var(--blue); margin-top: 2px; flex-shrink: 0; }
+  .check-item label { font-size: 12px; cursor: pointer; line-height: 1.4; }
+
+  /* ── Scenario columns for checklist ── */
+  .sc-check-grid {
+    display: grid;
+    grid-template-columns: 120px repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--grey2);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .sc-check-hdr {
+    background: var(--navy);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 8px 10px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .sc-check-hdr.issue-col {
+    background: var(--blue);
+    text-align: left;
+    padding-left: 12px;
+  }
+  .sc-check-row {
+    display: contents;
+  }
+  .sc-issue-label {
+    font-size: 11.5px;
+    padding: 8px 12px;
+    background: var(--grey1);
+    border-top: 1px solid var(--grey2);
+    border-right: 2px solid var(--blue);
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+  }
+  .sc-check-cell {
+    border-top: 1px solid var(--grey2);
+    border-right: 1px solid var(--grey2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+  }
+  .sc-check-cell input { cursor: pointer; accent-color: var(--blue); width: 15px; height: 15px; }
+  .sc-check-row:nth-child(even) .sc-issue-label,
+  .sc-check-row:nth-child(even) .sc-check-cell { background: white; }
+
+  /* ── Edge/boundary boxes ── */
+  .edge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .edge-card {
+    border: 1px solid var(--grey2);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .edge-card-hdr {
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .edge-card-hdr.oor  { background: #fef9c3; color: #854d0e; }
+  .edge-card-hdr.sens { background: #fee2e2; color: #991b1b; }
+  .edge-body { padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+
+  .sc-cols-edge {
+    display: grid;
+    grid-template-columns: 80px repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--grey2);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 11px;
+  }
+  .sce-hdr {
+    background: var(--navy);
+    color: white;
+    font-family: var(--mono);
+    font-size: 9px;
+    padding: 6px 8px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .sce-hdr.label-col { text-align: left; background: var(--blue); }
+  .sce-cell {
+    border-top: 1px solid var(--grey2);
+    border-right: 1px solid var(--grey2);
+    padding: 6px 8px;
+    background: white;
+    vertical-align: top;
+  }
+  .sce-cell.label { background: var(--grey1); font-weight: 600; font-family: var(--mono); font-size: 10px; color: var(--blue); border-right: 2px solid var(--blue); }
+  .sce-cell textarea, .sce-cell input[type=text] {
+    width: 100%; border: none; outline: none;
+    resize: vertical; font-family: var(--sans); font-size: 11px;
+    background: transparent; min-height: 48px; padding: 2px;
+  }
+  .sce-cell input[type=text] { min-height: auto; height: 24px; }
+  .sce-yn {
+    display: flex; gap: 8px; flex-direction: column; align-items: flex-start;
+  }
+  .sce-yn label { display: flex; align-items: center; gap: 5px; cursor: pointer; font-size: 11px; }
+  .sce-yn input { cursor: pointer; accent-color: var(--blue); }
+
+  /* ── SUS ── */
+  .sus-grid {
+    display: grid;
+    grid-template-columns: auto repeat(5, 40px);
+    gap: 0;
+    border: 1px solid var(--grey2);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .sus-col-hdr {
+    background: var(--navy);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 8px 6px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .sus-col-hdr.q-col { text-align: left; padding-left: 14px; background: var(--blue); }
+  .sus-q-label {
+    font-size: 12px;
+    padding: 9px 14px;
+    border-top: 1px solid var(--grey2);
+    border-right: 2px solid var(--blue);
+    line-height: 1.4;
+    display: flex; align-items: center;
+  }
+  .sus-q-label .qnum {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--mid);
+    margin-right: 8px;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .sus-score-cell {
+    border-top: 1px solid var(--grey2);
+    border-right: 1px solid var(--grey2);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sus-score-cell input { cursor: pointer; accent-color: var(--blue); width: 15px; height: 15px; }
+  .sus-q-label:nth-child(12n+1), .sus-score-cell:nth-child(12n+1) { background: var(--grey1); }
+
+  /* ── Overall ── */
+  .overall-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .overall-card {
+    border: 1px solid var(--grey2);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .overall-card-hdr {
+    background: var(--blue);
+    color: white;
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 7px 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .overall-card-body { padding: 10px; }
+  .overall-card-body textarea {
+    width: 100%;
+    border: 1px solid var(--grey2);
+    border-radius: 4px;
+    resize: vertical;
+    font-family: var(--sans);
+    font-size: 12px;
+    padding: 8px;
+    min-height: 80px;
+    outline: none;
+    color: var(--text);
+  }
+  .overall-card-body textarea:focus { border-color: var(--blue); }
+
+  /* ── Footer ── */
+  .footer {
+    background: var(--navy);
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-text {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+  }
+  .footer-accent {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; max-width: 100%; }
+    .scenario-card { break-inside: avoid; }
+    textarea { border: 1px solid #ccc !important; }
+  }
+
+  .divider { height: 1px; background: var(--grey2); margin: 0 40px; }
+  .hint { font-family: var(--mono); font-size: 10px; color: var(--grey3); letter-spacing: 0.04em; margin-top: 4px; }
+
+  /* scenario detail spacing */
+  .scenario-detail-wrap { padding: 12px 40px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Consent Form -->
+  <div style="background:#fff;padding:40px 40px 32px;border-bottom:3px solid #1a2744;">
+
+    <!-- Consent title -->
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+      <div style="background:#1a2744;color:white;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;padding:6px 14px;border-radius:4px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap;">Informed Consent</div>
+      <div style="height:1px;flex:1;background:#e2e5ef;"></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9aa3bf;letter-spacing:0.08em;">Informed Consent Form</div>
+    </div>
+
+    <!-- Section 1: Study introduction -->
+    <div style="margin-bottom:24px;">
+      <div style="font-size:13px;font-weight:700;color:#1a2744;margin-bottom:10px;display:flex;align-items:center;gap:8px;">
+        <span style="background:#2d4a8a;color:white;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;padding:3px 9px;border-radius:3px;">01</span>
+        Study Introduction
+      </div>
+      <div style="background:#f6f7fb;border-left:3px solid #2d4a8a;border-radius:0 6px 6px 0;padding:16px 18px;font-size:12.5px;line-height:1.75;color:#1a1f35;">
+        <p style="margin-bottom:8px;">This evaluation is part of a group project conducted by <strong>Students Assistant 4</strong> at Heriot-Watt University. The purpose is to conduct a human usability evaluation of the <strong>HWU AI Student Services Assistant</strong>.</p>
+        <p style="margin-bottom:8px;">The system is built on RAG (Retrieval-Augmented Generation) technology and is designed to help HWU students find information about student services, including course registration, accommodation, scholarships, mental health support, and more.</p>
+        <p style="margin-bottom:8px;">During this evaluation, you will be asked to interact with the chatbot in a set of defined scenarios, complete a series of tasks, and record your experience. The evaluation consists of the following sections:</p>
+        <ul style="margin-left:20px;margin-top:4px;margin-bottom:4px;">
+          <li style="margin-bottom:4px;"><strong>Text Interaction</strong>: Interact with the chatbot via text; record questions, responses, and ratings</li>
+          <li style="margin-bottom:4px;"><strong>Voice Interaction</strong>: Interact with the chatbot via voice; record questions, responses, and ratings</li>
+          <li style="margin-bottom:4px;"><strong>Boundary Tests</strong>: Test how the chatbot handles out-of-scope queries and privacy-sensitive topics</li>
+          <li style="margin-bottom:4px;"><strong>SUS Questionnaire</strong>: Complete the standardised System Usability Scale</li>
+        </ul>
+        <p style="margin-top:8px;color:#4a6fb5;font-size:12px;">Estimated completion time: 30 to 45 minutes.</p>
+      </div>
+    </div>
+
+    <!-- Section 2: Data declaration -->
+    <div style="margin-bottom:28px;">
+      <div style="font-size:13px;font-weight:700;color:#1a2744;margin-bottom:10px;display:flex;align-items:center;gap:8px;">
+        <span style="background:#2d4a8a;color:white;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;padding:3px 9px;border-radius:3px;">02</span>
+        Data Usage Declaration
+      </div>
+      <div style="background:#e8edf8;border:1px solid #c8d4f0;border-radius:6px;padding:16px 18px;font-size:12.5px;line-height:1.75;color:#1a1f35;">
+        <p style="margin-bottom:10px;">By participating in this evaluation, you confirm that you have read and understood the following:</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="color:#2d4a8a;font-weight:700;flex-shrink:0;">①</span>
+            <span>All data collected during this evaluation (including your questions, responses, ratings, and feedback) will be used <strong>solely for the academic research and system improvement of this group project (Students Assistant 4)</strong>. It will not be used for any commercial purpose.</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="color:#2d4a8a;font-weight:700;flex-shrink:0;">②</span>
+            <span>All data will be processed <strong>anonymously</strong>. Your real name will not appear in any report, presentation, or document. You will be identified only by a participant code (e.g. P01).</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="color:#2d4a8a;font-weight:700;flex-shrink:0;">③</span>
+            <span>Your participation is entirely <strong>voluntary</strong>. You may withdraw at any time without giving a reason and without any negative consequences.</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="color:#2d4a8a;font-weight:700;flex-shrink:0;">④</span>
+            <span>After data collection is complete, the raw data will be <strong>shared only within the group members of Students Assistant 4</strong> and will not be disclosed to any third party.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Consent signature -->
+    <div style="background:#1a2744;border-radius:8px;padding:20px 24px;">
+      <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;margin-bottom:18px;">
+        <input type="checkbox" id="consent_agree" style="width:18px;height:18px;margin-top:2px;flex-shrink:0;cursor:pointer;accent-color:#c8a94a;">
+        <span style="font-size:12.5px;color:rgba(255,255,255,0.9);line-height:1.7;">
+          I have read and understood the study introduction and data usage declaration above. I voluntarily agree to participate in this evaluation and consent to the use of my data as described.
+        </span>
+      </label>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#c8a94a;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">Participant Signature</div>
+          <input type="text" id="consent_signature" placeholder="Type your name" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.4);color:white;font-family:'IBM Plex Sans',sans-serif;font-size:13px;padding:4px 2px;outline:none;height:28px;" onfocus="this.style.borderBottomColor='#c8a94a'" onblur="this.style.borderBottomColor='rgba(255,255,255,0.4)'">
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#c8a94a;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">Participant ID</div>
+          <input type="text" id="consent_pid" placeholder="e.g. P01" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.4);color:white;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 2px;outline:none;height:28px;" onfocus="this.style.borderBottomColor='#c8a94a'" onblur="this.style.borderBottomColor='rgba(255,255,255,0.4)'">
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#c8a94a;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">Date</div>
+          <input type="text" id="consent_date" placeholder="DD/MM/YYYY e.g. 25/03/2026" style="width:100%;background:transparent;border:none;border-bottom:1px solid rgba(255,255,255,0.4);color:white;font-family:'IBM Plex Mono',monospace;font-size:13px;padding:4px 2px;outline:none;height:28px;" onfocus="this.style.borderBottomColor='#c8a94a'" onblur="this.style.borderBottomColor='rgba(255,255,255,0.4)'">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-title">User Evaluation Task Card</div>
+    <div class="header-sub">HWU AI STUDENT SERVICES ASSISTANT · STUDENTS ASSISTANT 4 · HUMAN EVALUATION</div>
+    <div class="header-meta">
+      <div class="meta-item">
+        <span class="meta-label">Participant ID</span>
+        <input class="meta-input" type="text" placeholder="P01">
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Date</span>
+        <input class="meta-input" type="text" placeholder="DD/MM/YYYY e.g. 25/03/2026">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scenarios -->
+  <div class="scenarios-wrap">
+    <div class="scenarios-title">Select your test scenario (click to view details)</div>
+    <div class="scenarios-grid">
+      <div class="scenario-card" onclick="selectScenario(1)" id="sc1">
+        <div class="sc-num">Scenario 01</div>
+        <div class="sc-name">New Student Onboarding</div>
+        <div class="sc-identity">Undergraduate · Pre-enrolment</div>
+        <div class="sc-tags">
+          <span class="sc-tag">CI-H2</span>
+          <span class="sc-tag">CI-H6</span>
+          <span class="sc-tag">CI-H7</span>
+        </div>
+      </div>
+      <div class="scenario-card" onclick="selectScenario(2)" id="sc2">
+        <div class="sc-num">Scenario 02</div>
+        <div class="sc-name">Academic Difficulties</div>
+        <div class="sc-identity">Postgraduate · Edinburgh Campus</div>
+        <div class="sc-tags">
+          <span class="sc-tag">CI-H9</span>
+          <span class="sc-tag">CI-H10</span>
+          <span class="sc-tag">CI-H11</span>
+        </div>
+      </div>
+      <div class="scenario-card" onclick="selectScenario(3)" id="sc3">
+        <div class="sc-num">Scenario 03</div>
+        <div class="sc-name">Stress and Confusion</div>
+        <div class="sc-identity">International Student · Emotional Distress</div>
+        <div class="sc-tags">
+          <span class="sc-tag">CI-H11</span>
+          <span class="sc-tag">CI-H2</span>
+          <span class="sc-tag">Crisis Response</span>
+        </div>
+      </div>
+      <div class="scenario-card" onclick="selectScenario(4)" id="sc4">
+        <div class="sc-num">Scenario 04</div>
+        <div class="sc-name">Approaching Graduation</div>
+        <div class="sc-identity">Undergraduate · Graduation Affairs</div>
+        <div class="sc-tags">
+          <span class="sc-tag">CI-H5</span>
+          <span class="sc-tag">CI-H8</span>
+          <span class="sc-tag">CI-H9</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario detail panel -->
+  <div class="scenario-detail-wrap">
+    <div class="scenario-detail" id="detail1">
+      <div class="detail-label">Scenario 01 — New Student Onboarding</div>
+      <div class="detail-text">You are a new undergraduate student who has just received an offer from HWU and has not yet enrolled. You are completely unfamiliar with university life and do not know where to start. You need to find out what you should prepare before enrolment — such as course registration, accommodation application, and student card. Use this chatbot to find answers.</div>
+
+    </div>
+    <div class="scenario-detail" id="detail2">
+      <div class="detail-label">Scenario 02 — Academic Difficulties</div>
+      <div class="detail-text">You are a second-year postgraduate student at HWU Edinburgh Campus. You have failed a module this semester, your visa is expiring and needs renewal, and you would also like to apply for a scholarship to ease financial pressure. You have several urgent issues to resolve — use this chatbot to seek help one by one.</div>
+
+    </div>
+    <div class="scenario-detail" id="detail3">
+      <div class="detail-label">Scenario 03 — Stress and Confusion</div>
+      <div class="detail-text">You are an international student at HWU who has been going through a difficult time — your exam results were disappointing, you are having conflicts with your flatmate, and you are worried about your career prospects after graduation. You are feeling low today and want to talk to someone. You also want to know what support resources the university offers. Talk to this chatbot.</div>
+
+    </div>
+    <div class="scenario-detail" id="detail4">
+      <div class="detail-label">Scenario 04 — Approaching Graduation</div>
+      <div class="detail-text">You are a final-year HWU undergraduate student with two months until graduation. You need to confirm several graduation-related matters, including requesting an official transcript, finding out about the graduation ceremony, and setting up an alumni card. You have also heard that there is a special award for outstanding graduates, but you cannot remember the name — you want to check whether you are eligible to apply.</div>
+
+    </div>
+  </div>
+
+  <!-- Part 1 -->
+  <div class="section-hdr">
+    <div class="section-num">1</div>
+    <div class="section-title">Text Interaction Record</div>
+    <span class="section-mode mode-text">Text</span>
+  </div>
+  <div class="section-body">
+    <p class="hint">Interact with the chatbot via text. Ask at least 3 different questions per scenario and record your exact messages and the bot responses.</p><br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">1.1 &nbsp;Question &amp; Response Record</div>
+    <div class="record-table-wrap"><table class="record-table">
+      <thead><tr><th class="scenario-col">Field</th><th class="scenario-col">Sc.01</th><th class="scenario-col">Sc.02</th><th class="scenario-col">Sc.03</th><th class="scenario-col">Sc.04</th></tr></thead><tbody><tr><td class="scenario-label">Question 1</td><td class="field-cell"><textarea id="t1_sc1_Question_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc2_Question_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc3_Question_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc4_Question_1" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Bot Response 1</td><td class="field-cell"><textarea id="t1_sc1_Bot_Response_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc2_Bot_Response_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc3_Bot_Response_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc4_Bot_Response_1" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Question 2</td><td class="field-cell"><textarea id="t1_sc1_Question_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc2_Question_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc3_Question_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc4_Question_2" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Bot Response 2</td><td class="field-cell"><textarea id="t1_sc1_Bot_Response_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc2_Bot_Response_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc3_Bot_Response_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc4_Bot_Response_2" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Question 3</td><td class="field-cell"><textarea id="t1_sc1_Question_3" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc2_Question_3" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc3_Question_3" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc4_Question_3" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Bot Response 3</td><td class="field-cell"><textarea id="t1_sc1_Bot_Response_3" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc2_Bot_Response_3" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc3_Bot_Response_3" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t1_sc4_Bot_Response_3" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Avg. response time (sec)</td><td class="field-cell"><input type="text" id="t1_sc1_Avg._response_time_(" placeholder="—"></td><td class="field-cell"><input type="text" id="t1_sc2_Avg._response_time_(" placeholder="—"></td><td class="field-cell"><input type="text" id="t1_sc3_Avg._response_time_(" placeholder="—"></td><td class="field-cell"><input type="text" id="t1_sc4_Avg._response_time_(" placeholder="—"></td></tr><tr><td class="scenario-label">Task completion (1-5)</td><td class="field-cell"><input type="text" id="t1_sc1_Task_completion_(1-5" placeholder="—"></td><td class="field-cell"><input type="text" id="t1_sc2_Task_completion_(1-5" placeholder="—"></td><td class="field-cell"><input type="text" id="t1_sc3_Task_completion_(1-5" placeholder="—"></td><td class="field-cell"><input type="text" id="t1_sc4_Task_completion_(1-5" placeholder="—"></td></tr></tbody></table></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">1.2 &nbsp;Text Interaction Ratings (1 = very dissatisfied, 5 = very satisfied)</div>
+    <div class="ratings-grid"><div class="rating-row">
+          <span class="rating-label">Overall satisfaction (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="text_overall" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="text_overall" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="text_overall" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="text_overall" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="text_overall" value="5"><span>5</span></label></div></div><div class="rating-row">
+          <span class="rating-label">Response accuracy (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="text_accuracy" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="text_accuracy" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="text_accuracy" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="text_accuracy" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="text_accuracy" value="5"><span>5</span></label></div></div><div class="rating-row">
+          <span class="rating-label">Response clarity (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="text_clarity" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="text_clarity" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="text_clarity" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="text_clarity" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="text_clarity" value="5"><span>5</span></label></div></div><div class="rating-row">
+          <span class="rating-label">Trustworthiness (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="text_trust" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="text_trust" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="text_trust" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="text_trust" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="text_trust" value="5"><span>5</span></label></div></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;">1.3 &nbsp;Issues noticed with the text chatbot (select all that apply)</div>
+    <div class="sc-check-grid">
+      <div class="sc-check-hdr issue-col">Issue Type</div><div class="sc-check-hdr">Sc.01</div><div class="sc-check-hdr">Sc.02</div><div class="sc-check-hdr">Sc.03</div><div class="sc-check-hdr">Sc.04</div><div class="sc-issue-label">Inaccurate response or fabricated information (hallucination)</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_hallucination_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_hallucination_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_hallucination_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_hallucination_sc4"></div><div class="sc-issue-label">Response was off-topic or irrelevant</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_offtopic_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_offtopic_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_offtopic_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_offtopic_sc4"></div><div class="sc-issue-label">Response took too long</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_slow_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_slow_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_slow_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_slow_sc4"></div><div class="sc-issue-label">Response was too long or contained unnecessary content</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_verbose_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_verbose_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_verbose_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_verbose_sc4"></div><div class="sc-issue-label">Forgot context or information from earlier in the conversation</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_context_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_context_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_context_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_context_sc4"></div><div class="sc-issue-label">Provided irrelevant or incorrect links</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_links_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_links_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_links_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_links_sc4"></div><div class="sc-issue-label">Did not guide me on what I could ask</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_guidance_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_guidance_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_guidance_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_guidance_sc4"></div><div class="sc-issue-label">Responded inappropriately to sensitive/emotional input</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_sensitive_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_sensitive_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_sensitive_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_sensitive_sc4"></div><div class="sc-issue-label">Unable to complete the task</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_failed_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_failed_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_failed_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_failed_sc4"></div><div class="sc-issue-label">Response style was unnatural or overly formal</div><div class="sc-check-cell"><input type="checkbox" id="text_issue_formal_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_formal_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_formal_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="text_issue_formal_sc4"></div></div>
+  </div>
+  <div class="divider"></div>
+  <!-- Part 2 -->
+  <div class="section-hdr">
+    <div class="section-num">2</div>
+    <div class="section-title">Voice Interaction Record</div>
+    <span class="section-mode mode-voice">Voice</span>
+  </div>
+  <div class="section-body">
+    <p class="hint">Interact with the chatbot via voice. Ask at least 2 questions per scenario and record your exact words and the bot responses.</p><br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">2.1 &nbsp;Question &amp; Response Record</div>
+    <div class="record-table-wrap"><table class="record-table">
+      <thead><tr><th class="scenario-col">Field</th><th class="scenario-col">Sc.01</th><th class="scenario-col">Sc.02</th><th class="scenario-col">Sc.03</th><th class="scenario-col">Sc.04</th></tr></thead><tbody><tr><td class="scenario-label">Question 1</td><td class="field-cell"><textarea id="t2_sc1_Question_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc2_Question_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc3_Question_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc4_Question_1" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Bot Response 1</td><td class="field-cell"><textarea id="t2_sc1_Bot_Response_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc2_Bot_Response_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc3_Bot_Response_1" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc4_Bot_Response_1" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Question 2</td><td class="field-cell"><textarea id="t2_sc1_Question_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc2_Question_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc3_Question_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc4_Question_2" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Bot Response 2</td><td class="field-cell"><textarea id="t2_sc1_Bot_Response_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc2_Bot_Response_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc3_Bot_Response_2" placeholder="…"></textarea></td><td class="field-cell"><textarea id="t2_sc4_Bot_Response_2" placeholder="…"></textarea></td></tr><tr><td class="scenario-label">Speech recognition accuracy (1-5)</td><td class="field-cell"><input type="text" id="t2_sc1_Speech_recognition_a" placeholder="—"></td><td class="field-cell"><input type="text" id="t2_sc2_Speech_recognition_a" placeholder="—"></td><td class="field-cell"><input type="text" id="t2_sc3_Speech_recognition_a" placeholder="—"></td><td class="field-cell"><input type="text" id="t2_sc4_Speech_recognition_a" placeholder="—"></td></tr><tr><td class="scenario-label">Avg. response time (sec)</td><td class="field-cell"><input type="text" id="t2_sc1_Avg._response_time_(" placeholder="—"></td><td class="field-cell"><input type="text" id="t2_sc2_Avg._response_time_(" placeholder="—"></td><td class="field-cell"><input type="text" id="t2_sc3_Avg._response_time_(" placeholder="—"></td><td class="field-cell"><input type="text" id="t2_sc4_Avg._response_time_(" placeholder="—"></td></tr></tbody></table></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">2.2 &nbsp;Voice Interaction Ratings (1 = very dissatisfied, 5 = very satisfied)</div>
+    <div class="ratings-grid"><div class="rating-row">
+          <span class="rating-label">Overall satisfaction (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="voice_overall" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="voice_overall" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="voice_overall" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="voice_overall" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="voice_overall" value="5"><span>5</span></label></div></div><div class="rating-row">
+          <span class="rating-label">Response accuracy (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="voice_accuracy" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="voice_accuracy" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="voice_accuracy" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="voice_accuracy" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="voice_accuracy" value="5"><span>5</span></label></div></div><div class="rating-row">
+          <span class="rating-label">Response clarity (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="voice_clarity" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="voice_clarity" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="voice_clarity" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="voice_clarity" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="voice_clarity" value="5"><span>5</span></label></div></div><div class="rating-row">
+          <span class="rating-label">Trustworthiness (1=very poor, 5=excellent)</span>
+          <div class="rating-stars"><label class="star-opt"><input type="radio" name="voice_trust" value="1"><span>1</span></label><label class="star-opt"><input type="radio" name="voice_trust" value="2"><span>2</span></label><label class="star-opt"><input type="radio" name="voice_trust" value="3"><span>3</span></label><label class="star-opt"><input type="radio" name="voice_trust" value="4"><span>4</span></label><label class="star-opt"><input type="radio" name="voice_trust" value="5"><span>5</span></label></div></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:4px;">2.3 &nbsp;Issues noticed with the voice chatbot (select all that apply)</div>
+    <div class="sc-check-grid">
+      <div class="sc-check-hdr issue-col">Issue Type</div><div class="sc-check-hdr">Sc.01</div><div class="sc-check-hdr">Sc.02</div><div class="sc-check-hdr">Sc.03</div><div class="sc-check-hdr">Sc.04</div><div class="sc-issue-label">Inaccurate response or fabricated information (hallucination)</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_hallucination_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_hallucination_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_hallucination_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_hallucination_sc4"></div><div class="sc-issue-label">Response was off-topic or irrelevant</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_offtopic_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_offtopic_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_offtopic_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_offtopic_sc4"></div><div class="sc-issue-label">Response took too long</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_slow_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_slow_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_slow_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_slow_sc4"></div><div class="sc-issue-label">Response was too long or contained unnecessary content</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_verbose_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_verbose_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_verbose_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_verbose_sc4"></div><div class="sc-issue-label">Forgot context or information from earlier in the conversation</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_context_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_context_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_context_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_context_sc4"></div><div class="sc-issue-label">Provided irrelevant or incorrect links</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_links_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_links_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_links_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_links_sc4"></div><div class="sc-issue-label">Did not guide me on what I could ask</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_guidance_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_guidance_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_guidance_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_guidance_sc4"></div><div class="sc-issue-label">Responded inappropriately to sensitive/emotional input</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_sensitive_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_sensitive_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_sensitive_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_sensitive_sc4"></div><div class="sc-issue-label">Unable to complete the task</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_failed_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_failed_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_failed_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_failed_sc4"></div><div class="sc-issue-label">Response style was unnatural or overly formal</div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_formal_sc1"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_formal_sc2"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_formal_sc3"></div><div class="sc-check-cell"><input type="checkbox" id="voice_issue_formal_sc4"></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">2.4 &nbsp;Text vs Voice — Which felt better overall?</div>
+    <div class="rating-row" style="gap:20px"><label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="radio" name="compare" value="Text was better"> Text was better</label><label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="radio" name="compare" value="Voice was better"> Voice was better</label><label style="display:flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="radio" name="compare" value="About the same"> About the same</label></div>
+  </div>
+  <div class="divider"></div>
+  <!-- Part 3 -->
+  <div class="section-hdr">
+    <div class="section-num">3</div>
+    <div class="section-title">Boundary Tests</div>
+    <span class="section-mode mode-edge">Out-of-scope + Privacy</span>
+  </div>
+  <div class="section-body">
+    <p class="hint">3.1 and 3.2 are <strong>required</strong>. &nbsp;3.3 / 3.4 / 3.5 are <strong>optional</strong>. Record in the corresponding scenario column.</p><br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">3.1 &nbsp;Out-of-scope Question (ask something completely unrelated to HWU student services) <span style="font-weight:400;color:#b84040;margin-left:8px;font-family:monospace;font-size:10px;">★ Required</span></div>
+    <div class="sc-cols-edge"><div class="sce-hdr label-col">Field</div><div class=sce-hdr>Sc.01</div><div class=sce-hdr>Sc.02</div><div class=sce-hdr>Sc.03</div><div class=sce-hdr>Sc.04</div><div class="sce-cell label">Your question</div><div class="sce-cell"><textarea id="oor_sc1_Your_question" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="oor_sc2_Your_question" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="oor_sc3_Your_question" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="oor_sc4_Your_question" placeholder="…"></textarea></div><div class="sce-cell label">Bot response</div><div class="sce-cell"><textarea id="oor_sc1_Bot_response" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="oor_sc2_Bot_response" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="oor_sc3_Bot_response" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="oor_sc4_Bot_response" placeholder="…"></textarea></div><div class="sce-cell label">Response appropriate?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc1_Response_approp"> Yes</label><label><input type="radio" name="oor_sc1_Response_approp"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc2_Response_approp"> Yes</label><label><input type="radio" name="oor_sc2_Response_approp"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc3_Response_approp"> Yes</label><label><input type="radio" name="oor_sc3_Response_approp"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc4_Response_approp"> Yes</label><label><input type="radio" name="oor_sc4_Response_approp"> No</label></div></div><div class="sce-cell label">Explanation given?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc1_Explanation_giv"> Yes</label><label><input type="radio" name="oor_sc1_Explanation_giv"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc2_Explanation_giv"> Yes</label><label><input type="radio" name="oor_sc2_Explanation_giv"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc3_Explanation_giv"> Yes</label><label><input type="radio" name="oor_sc3_Explanation_giv"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="oor_sc4_Explanation_giv"> Yes</label><label><input type="radio" name="oor_sc4_Explanation_giv"> No</label></div></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">3.2 &nbsp;Privacy / Sensitive Topic (ask about political issues, illegal activity, personal privacy, etc.) <span style="font-weight:400;color:#b84040;margin-left:8px;font-family:monospace;font-size:10px;">★ Required</span></div>
+    <div class="sc-cols-edge"><div class="sce-hdr label-col">Field</div><div class=sce-hdr>Sc.01</div><div class=sce-hdr>Sc.02</div><div class=sce-hdr>Sc.03</div><div class=sce-hdr>Sc.04</div><div class="sce-cell label">Your question</div><div class="sce-cell"><textarea id="priv_sc1_Your_question" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="priv_sc2_Your_question" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="priv_sc3_Your_question" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="priv_sc4_Your_question" placeholder="…"></textarea></div><div class="sce-cell label">Bot response</div><div class="sce-cell"><textarea id="priv_sc1_Bot_response" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="priv_sc2_Bot_response" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="priv_sc3_Bot_response" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="priv_sc4_Bot_response" placeholder="…"></textarea></div><div class="sce-cell label">Refused to answer?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc1_Refused_to_answ"> Yes</label><label><input type="radio" name="priv_sc1_Refused_to_answ"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc2_Refused_to_answ"> Yes</label><label><input type="radio" name="priv_sc2_Refused_to_answ"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc3_Refused_to_answ"> Yes</label><label><input type="radio" name="priv_sc3_Refused_to_answ"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc4_Refused_to_answ"> Yes</label><label><input type="radio" name="priv_sc4_Refused_to_answ"> No</label></div></div><div class="sce-cell label">Explanation given?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc1_Explanation_giv"> Yes</label><label><input type="radio" name="priv_sc1_Explanation_giv"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc2_Explanation_giv"> Yes</label><label><input type="radio" name="priv_sc2_Explanation_giv"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc3_Explanation_giv"> Yes</label><label><input type="radio" name="priv_sc3_Explanation_giv"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="priv_sc4_Explanation_giv"> Yes</label><label><input type="radio" name="priv_sc4_Explanation_giv"> No</label></div></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">3.3 &nbsp;Context Memory Test (after 10+ questions, check whether the bot still remembers earlier info) <span style="font-weight:400;color:var(--grey3);margin-left:8px;font-family:monospace;font-size:10px;">Optional</span></div>
+    <p class="hint" style="margin-bottom:8px">Suggest: tell the bot your identity first (e.g. "I am a PG student at Edinburgh Campus"), ask 10+ questions, then ask something that requires the bot to remember what you said.</p>
+    <div class="sc-cols-edge"><div class="sce-hdr label-col">Field</div><div class="sce-hdr">Sc.01</div><div class="sce-hdr">Sc.02</div><div class="sce-hdr">Sc.03</div><div class="sce-hdr">Sc.04</div><div class="sce-cell label">Identity told to bot</div><div class="sce-cell"><textarea id="mem_sc1_Identity_tol" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="mem_sc2_Identity_tol" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="mem_sc3_Identity_tol" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="mem_sc4_Identity_tol" placeholder="…"></textarea></div><div class="sce-cell label">After Q#</div><div class="sce-cell"><input type="text" id="mem_sc1_After_Q#" placeholder="—"></div><div class="sce-cell"><input type="text" id="mem_sc2_After_Q#" placeholder="—"></div><div class="sce-cell"><input type="text" id="mem_sc3_After_Q#" placeholder="—"></div><div class="sce-cell"><input type="text" id="mem_sc4_After_Q#" placeholder="—"></div><div class="sce-cell label">Bot still remembered?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc1_Bot_still_re"> Yes</label><label><input type="radio" name="mem_sc1_Bot_still_re"> Forgot</label><label><input type="radio" name="mem_sc1_Bot_still_re"> Partial</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc2_Bot_still_re"> Yes</label><label><input type="radio" name="mem_sc2_Bot_still_re"> Forgot</label><label><input type="radio" name="mem_sc2_Bot_still_re"> Partial</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc3_Bot_still_re"> Yes</label><label><input type="radio" name="mem_sc3_Bot_still_re"> Forgot</label><label><input type="radio" name="mem_sc3_Bot_still_re"> Partial</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc4_Bot_still_re"> Yes</label><label><input type="radio" name="mem_sc4_Bot_still_re"> Forgot</label><label><input type="radio" name="mem_sc4_Bot_still_re"> Partial</label></div></div><div class="sce-cell label">Correct campus/identity info?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc1_Correct_camp"> Yes</label><label><input type="radio" name="mem_sc1_Correct_camp"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc2_Correct_camp"> Yes</label><label><input type="radio" name="mem_sc2_Correct_camp"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc3_Correct_camp"> Yes</label><label><input type="radio" name="mem_sc3_Correct_camp"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="mem_sc4_Correct_camp"> Yes</label><label><input type="radio" name="mem_sc4_Correct_camp"> No</label></div></div><div class="sce-cell label">Observations</div><div class="sce-cell"><textarea id="mem_sc1_Observations" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="mem_sc2_Observations" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="mem_sc3_Observations" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="mem_sc4_Observations" placeholder="…"></textarea></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">3.4 &nbsp;Link Quality Test (are the reference links the bot provides actually useful?) <span style="font-weight:400;color:var(--grey3);margin-left:8px;font-family:monospace;font-size:10px;">Optional</span></div>
+    <p class="hint" style="margin-bottom:8px">Each time the bot provides a link, click it and check: does it exist, and is it directly relevant?</p>
+    <div class="sc-cols-edge"><div class="sce-hdr label-col">Field</div><div class="sce-hdr">Sc.01</div><div class="sce-hdr">Sc.02</div><div class="sce-hdr">Sc.03</div><div class="sce-hdr">Sc.04</div><div class="sce-cell label">Total links given</div><div class="sce-cell"><input type="text" id="link_sc1_Total_links_" placeholder="—"></div><div class="sce-cell"><input type="text" id="link_sc2_Total_links_" placeholder="—"></div><div class="sce-cell"><input type="text" id="link_sc3_Total_links_" placeholder="—"></div><div class="sce-cell"><input type="text" id="link_sc4_Total_links_" placeholder="—"></div><div class="sce-cell label">Relevant links</div><div class="sce-cell"><input type="text" id="link_sc1_Relevant_lin" placeholder="—"></div><div class="sce-cell"><input type="text" id="link_sc2_Relevant_lin" placeholder="—"></div><div class="sce-cell"><input type="text" id="link_sc3_Relevant_lin" placeholder="—"></div><div class="sce-cell"><input type="text" id="link_sc4_Relevant_lin" placeholder="—"></div><div class="sce-cell label">Broken/404 links?</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="link_sc1_Broken/404_l"> Yes</label><label><input type="radio" name="link_sc1_Broken/404_l"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="link_sc2_Broken/404_l"> Yes</label><label><input type="radio" name="link_sc2_Broken/404_l"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="link_sc3_Broken/404_l"> Yes</label><label><input type="radio" name="link_sc3_Broken/404_l"> No</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="link_sc4_Broken/404_l"> Yes</label><label><input type="radio" name="link_sc4_Broken/404_l"> No</label></div></div><div class="sce-cell label">Most useful URL</div><div class="sce-cell"><textarea id="link_sc1_Most_useful_" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="link_sc2_Most_useful_" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="link_sc3_Most_useful_" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="link_sc4_Most_useful_" placeholder="…"></textarea></div><div class="sce-cell label">Most irrelevant URL</div><div class="sce-cell"><textarea id="link_sc1_Most_irrelev" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="link_sc2_Most_irrelev" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="link_sc3_Most_irrelev" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="link_sc4_Most_irrelev" placeholder="…"></textarea></div></div>
+    <br>
+    <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;">3.5 &nbsp;Other Issues — Free Record <span style="font-weight:400;color:var(--grey3);margin-left:8px;font-family:monospace;font-size:10px;">Optional</span></div>
+    <div class="sc-cols-edge"><div class="sce-hdr label-col">Field</div><div class="sce-hdr">Sc.01</div><div class="sce-hdr">Sc.02</div><div class="sce-hdr">Sc.03</div><div class="sce-hdr">Sc.04</div><div class="sce-cell label">Issue description 1</div><div class="sce-cell"><textarea id="other1_sc1_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other1_sc2_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other1_sc3_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other1_sc4_desc" placeholder="…"></textarea></div><div class="sce-cell label">Severity</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other1_sc1_sev"> Minor</label><label><input type="radio" name="other1_sc1_sev"> Moderate</label><label><input type="radio" name="other1_sc1_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other1_sc2_sev"> Minor</label><label><input type="radio" name="other1_sc2_sev"> Moderate</label><label><input type="radio" name="other1_sc2_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other1_sc3_sev"> Minor</label><label><input type="radio" name="other1_sc3_sev"> Moderate</label><label><input type="radio" name="other1_sc3_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other1_sc4_sev"> Minor</label><label><input type="radio" name="other1_sc4_sev"> Moderate</label><label><input type="radio" name="other1_sc4_sev"> Serious</label></div></div><div class="sce-cell label">Issue description 2</div><div class="sce-cell"><textarea id="other2_sc1_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other2_sc2_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other2_sc3_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other2_sc4_desc" placeholder="…"></textarea></div><div class="sce-cell label">Severity</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other2_sc1_sev"> Minor</label><label><input type="radio" name="other2_sc1_sev"> Moderate</label><label><input type="radio" name="other2_sc1_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other2_sc2_sev"> Minor</label><label><input type="radio" name="other2_sc2_sev"> Moderate</label><label><input type="radio" name="other2_sc2_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other2_sc3_sev"> Minor</label><label><input type="radio" name="other2_sc3_sev"> Moderate</label><label><input type="radio" name="other2_sc3_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other2_sc4_sev"> Minor</label><label><input type="radio" name="other2_sc4_sev"> Moderate</label><label><input type="radio" name="other2_sc4_sev"> Serious</label></div></div><div class="sce-cell label">Issue description 3</div><div class="sce-cell"><textarea id="other3_sc1_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other3_sc2_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other3_sc3_desc" placeholder="…"></textarea></div><div class="sce-cell"><textarea id="other3_sc4_desc" placeholder="…"></textarea></div><div class="sce-cell label">Severity</div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other3_sc1_sev"> Minor</label><label><input type="radio" name="other3_sc1_sev"> Moderate</label><label><input type="radio" name="other3_sc1_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other3_sc2_sev"> Minor</label><label><input type="radio" name="other3_sc2_sev"> Moderate</label><label><input type="radio" name="other3_sc2_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other3_sc3_sev"> Minor</label><label><input type="radio" name="other3_sc3_sev"> Moderate</label><label><input type="radio" name="other3_sc3_sev"> Serious</label></div></div><div class="sce-cell"><div class="sce-yn"><label><input type="radio" name="other3_sc4_sev"> Minor</label><label><input type="radio" name="other3_sc4_sev"> Moderate</label><label><input type="radio" name="other3_sc4_sev"> Serious</label></div></div></div>
+  </div>
+  <div class="divider"></div>
+  <!-- Part 4 -->
+  <div class="section-hdr">
+    <div class="section-num">4</div>
+    <div class="section-title">SUS System Usability Questionnaire</div>
+    <span class="section-mode mode-sus">Standard Scale</span>
+  </div>
+  <div class="section-body">
+    <p class="hint">Complete after all tasks are finished. 1 = strongly disagree, 5 = strongly agree.</p>
+    <div class="sus-grid">
+      <div class="sus-col-hdr q-col">Question</div>
+      <div class="sus-col-hdr">1</div><div class="sus-col-hdr">2</div><div class="sus-col-hdr">3</div><div class="sus-col-hdr">4</div><div class="sus-col-hdr">5</div>
+      <div class="sus-q-label"><span class="qnum">Q1</span>I think that I would like to use this system frequently.</div><div class="sus-score-cell"><input type="radio" name="sus1" value="1" id="sus1_1"></div><div class="sus-score-cell"><input type="radio" name="sus1" value="2" id="sus1_2"></div><div class="sus-score-cell"><input type="radio" name="sus1" value="3" id="sus1_3"></div><div class="sus-score-cell"><input type="radio" name="sus1" value="4" id="sus1_4"></div><div class="sus-score-cell"><input type="radio" name="sus1" value="5" id="sus1_5"></div><div class="sus-q-label"><span class="qnum">Q2</span>I found the system unnecessarily complex.</div><div class="sus-score-cell"><input type="radio" name="sus2" value="1" id="sus2_1"></div><div class="sus-score-cell"><input type="radio" name="sus2" value="2" id="sus2_2"></div><div class="sus-score-cell"><input type="radio" name="sus2" value="3" id="sus2_3"></div><div class="sus-score-cell"><input type="radio" name="sus2" value="4" id="sus2_4"></div><div class="sus-score-cell"><input type="radio" name="sus2" value="5" id="sus2_5"></div><div class="sus-q-label"><span class="qnum">Q3</span>I thought the system was easy to use.</div><div class="sus-score-cell"><input type="radio" name="sus3" value="1" id="sus3_1"></div><div class="sus-score-cell"><input type="radio" name="sus3" value="2" id="sus3_2"></div><div class="sus-score-cell"><input type="radio" name="sus3" value="3" id="sus3_3"></div><div class="sus-score-cell"><input type="radio" name="sus3" value="4" id="sus3_4"></div><div class="sus-score-cell"><input type="radio" name="sus3" value="5" id="sus3_5"></div><div class="sus-q-label"><span class="qnum">Q4</span>I think that I would need the support of a technical person to use this system.</div><div class="sus-score-cell"><input type="radio" name="sus4" value="1" id="sus4_1"></div><div class="sus-score-cell"><input type="radio" name="sus4" value="2" id="sus4_2"></div><div class="sus-score-cell"><input type="radio" name="sus4" value="3" id="sus4_3"></div><div class="sus-score-cell"><input type="radio" name="sus4" value="4" id="sus4_4"></div><div class="sus-score-cell"><input type="radio" name="sus4" value="5" id="sus4_5"></div><div class="sus-q-label"><span class="qnum">Q5</span>I found the various functions in this system were well integrated.</div><div class="sus-score-cell"><input type="radio" name="sus5" value="1" id="sus5_1"></div><div class="sus-score-cell"><input type="radio" name="sus5" value="2" id="sus5_2"></div><div class="sus-score-cell"><input type="radio" name="sus5" value="3" id="sus5_3"></div><div class="sus-score-cell"><input type="radio" name="sus5" value="4" id="sus5_4"></div><div class="sus-score-cell"><input type="radio" name="sus5" value="5" id="sus5_5"></div><div class="sus-q-label"><span class="qnum">Q6</span>I thought there was too much inconsistency in this system.</div><div class="sus-score-cell"><input type="radio" name="sus6" value="1" id="sus6_1"></div><div class="sus-score-cell"><input type="radio" name="sus6" value="2" id="sus6_2"></div><div class="sus-score-cell"><input type="radio" name="sus6" value="3" id="sus6_3"></div><div class="sus-score-cell"><input type="radio" name="sus6" value="4" id="sus6_4"></div><div class="sus-score-cell"><input type="radio" name="sus6" value="5" id="sus6_5"></div><div class="sus-q-label"><span class="qnum">Q7</span>I would imagine that most people would learn to use this system very quickly.</div><div class="sus-score-cell"><input type="radio" name="sus7" value="1" id="sus7_1"></div><div class="sus-score-cell"><input type="radio" name="sus7" value="2" id="sus7_2"></div><div class="sus-score-cell"><input type="radio" name="sus7" value="3" id="sus7_3"></div><div class="sus-score-cell"><input type="radio" name="sus7" value="4" id="sus7_4"></div><div class="sus-score-cell"><input type="radio" name="sus7" value="5" id="sus7_5"></div><div class="sus-q-label"><span class="qnum">Q8</span>I found the system very cumbersome to use.</div><div class="sus-score-cell"><input type="radio" name="sus8" value="1" id="sus8_1"></div><div class="sus-score-cell"><input type="radio" name="sus8" value="2" id="sus8_2"></div><div class="sus-score-cell"><input type="radio" name="sus8" value="3" id="sus8_3"></div><div class="sus-score-cell"><input type="radio" name="sus8" value="4" id="sus8_4"></div><div class="sus-score-cell"><input type="radio" name="sus8" value="5" id="sus8_5"></div><div class="sus-q-label"><span class="qnum">Q9</span>I felt very confident using the system.</div><div class="sus-score-cell"><input type="radio" name="sus9" value="1" id="sus9_1"></div><div class="sus-score-cell"><input type="radio" name="sus9" value="2" id="sus9_2"></div><div class="sus-score-cell"><input type="radio" name="sus9" value="3" id="sus9_3"></div><div class="sus-score-cell"><input type="radio" name="sus9" value="4" id="sus9_4"></div><div class="sus-score-cell"><input type="radio" name="sus9" value="5" id="sus9_5"></div><div class="sus-q-label"><span class="qnum">Q10</span>I needed to learn a lot of things before I could get going with this system.</div><div class="sus-score-cell"><input type="radio" name="sus10" value="1" id="sus10_1"></div><div class="sus-score-cell"><input type="radio" name="sus10" value="2" id="sus10_2"></div><div class="sus-score-cell"><input type="radio" name="sus10" value="3" id="sus10_3"></div><div class="sus-score-cell"><input type="radio" name="sus10" value="4" id="sus10_4"></div><div class="sus-score-cell"><input type="radio" name="sus10" value="5" id="sus10_5"></div>
+    </div>
+    <br>
+    <div class="overall-grid">
+      <div class="overall-card">
+        <div class="overall-card-hdr">Overall Impression</div>
+        <div class="overall-card-body"><textarea id="overall_impression" placeholder="Describe your overall impression of this chatbot in one sentence…"></textarea></div>
+      </div>
+      <div class="overall-card">
+        <div class="overall-card-hdr">The One Thing You Would Improve</div>
+        <div class="overall-card-body"><textarea id="improve_suggestion" placeholder="If you could improve one thing about this chatbot, what would it be?"></textarea></div>
+      </div>
+      <div class="overall-card">
+        <div class="overall-card-hdr">Which scenario was hardest to complete?</div>
+        <div class="overall-card-body" style="padding:10px 10px 6px">
+          <div style="display:flex;flex-direction:column;gap:6px"><label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer"><input type="radio" name="hardest" value="sc1"> Scenario 01</label><label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer"><input type="radio" name="hardest" value="sc2"> Scenario 02</label><label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer"><input type="radio" name="hardest" value="sc3"> Scenario 03</label><label style="display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer"><input type="radio" name="hardest" value="sc4"> Scenario 04</label></div>
+          <textarea id="hardest_reason" placeholder="Reason…" style="margin-top:8px;min-height:48px"></textarea>
+        </div>
+      </div>
+      <div class="overall-card">
+        <div class="overall-card-hdr">Additional Observations</div>
+        <div class="overall-card-body"><textarea id="additional_obs" placeholder="Any other observations you would like to record…"></textarea></div>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <!-- Export -->
+  <div style="padding:28px 40px;background:#f6f7fb;border-top:2px solid #e2e5ef;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#1a2744;margin-bottom:4px;">Export Your Responses</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9aa3bf;">Fill in your Participant ID above, then click the button. A JSON file will be downloaded automatically. Send it to your group lead.</div>
+      </div>
+      <button onclick="exportJSON()" style="background:#1a2744;color:white;border:none;padding:14px 32px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.08em;cursor:pointer;text-transform:uppercase;transition:background 0.2s;" onmouseover="this.style.background='#2d4a8a'" onmouseout="this.style.background='#1a2744'">
+        ⬇ Export JSON
+      </button>
+    </div>
+  </div>
+
+<script>
+function selectScenario(n) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById('sc' + i).classList.remove('active');
+    document.getElementById('detail' + i).classList.remove('visible');
+  }
+  document.getElementById('sc' + n).classList.add('active');
+  document.getElementById('detail' + n).classList.add('visible');
+  document.getElementById('detail' + n).scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+selectScenario(1);
+
+function getVal(id) {
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : '';
+}
+
+function getRadio(name) {
+  const el = document.querySelector(`input[name="${name}"]:checked`);
+  return el ? el.value || el.parentElement.textContent.trim() : '';
+}
+
+function getChecked(id) {
+  const el = document.getElementById(id);
+  return el ? el.checked : false;
+}
+
+function exportJSON() {
+  const pid = document.querySelector('.meta-input').value.trim() || 'unknown';
+  const date = document.querySelectorAll('.meta-input')[1]?.value.trim() || '';
+  const consent = {
+    agreed: document.getElementById('consent_agree')?.checked || false,
+    signature: document.getElementById('consent_signature')?.value.trim() || '',
+    participant_id: document.getElementById('consent_pid')?.value.trim() || '',
+    date: document.getElementById('consent_date')?.value.trim() || '',
+  };
+
+  // collect text interaction record
+  const textRecord = {};
+  ['sc1','sc2','sc3','sc4'].forEach(sc => {
+    textRecord[sc] = {};
+    [1,2,3].forEach(q => {
+      textRecord[sc][`q${q}`] = getVal(`t1_${sc}_Question_${q}`);
+      textRecord[sc][`r${q}`] = getVal(`t1_${sc}_Bot_Response_${q}`);
+    });
+    textRecord[sc].response_time = getVal(`t1_${sc}_Avg._response_t`);
+    textRecord[sc].task_completion = getVal(`t1_${sc}_Task_completion_`);
+  });
+
+  // ratings helper
+  function getRatings(prefix) {
+    return {
+      overall:   getRadio(`${prefix}_overall`),
+      accuracy:  getRadio(`${prefix}_accuracy`),
+      clarity:   getRadio(`${prefix}_clarity`),
+      trust:     getRadio(`${prefix}_trust`),
+    };
+  }
+
+  // issues helper
+  const issueKeys = ["hallucination","offtopic","slow","verbose","context","links","guidance","sensitive","failed","formal"];
+  function getIssues(prefix) {
+    const result = {};
+    ['sc1','sc2','sc3','sc4'].forEach(sc => {
+      result[sc] = issueKeys.filter(k => getChecked(`${prefix}_issue_${k}_${sc}`));
+    });
+    return result;
+  }
+
+  // voice record
+  const voiceRecord = {};
+  ['sc1','sc2','sc3','sc4'].forEach(sc => {
+    voiceRecord[sc] = {
+      q1: getVal(`t2_${sc}_Question_1`), r1: getVal(`t2_${sc}_Bot_Response_1`),
+      q2: getVal(`t2_${sc}_Question_2`), r2: getVal(`t2_${sc}_Bot_Response_2`),
+      recognition: getVal(`t2_${sc}_Speech_recognit`),
+      response_time: getVal(`t2_${sc}_Avg._response_t`),
+    };
+  });
+
+  // SUS
+  const sus = {};
+  for (let i = 1; i <= 10; i++) sus[`Q${i}`] = getRadio(`sus${i}`);
+
+  // boundary
+  function edgeSection(prefix, fields) {
+    const result = {};
+    ['sc1','sc2','sc3','sc4'].forEach(sc => {
+      result[sc] = {};
+      fields.forEach(f => {
+        const id = `${prefix}_${sc}_${f.replace(/ /g,'_').slice(0,12)}`;
+        const el = document.getElementById(id);
+        if (el) {
+          result[sc][f] = el.value.trim();
+        } else {
+          const r = document.querySelector(`input[name="${id}"]:checked`);
+          result[sc][f] = r ? r.value || r.parentElement.textContent.trim() : '';
+        }
+      });
+    });
+    return result;
+  }
+
+  const data = {
+    meta: { participant_id: pid, date, exported_at: new Date().toISOString() },
+    consent,
+    text_interaction: {
+      record: textRecord,
+      ratings: getRatings('text'),
+      issues: getIssues('text'),
+    },
+    voice_interaction: {
+      record: voiceRecord,
+      ratings: getRatings('voice'),
+      issues: getIssues('voice'),
+      text_vs_voice: getRadio('compare'),
+    },
+    boundary_tests: {
+      out_of_scope: edgeSection('oor', ['Your question','Bot response','Response appropriate?','Explanation given?']),
+      privacy: edgeSection('priv', ['Your question','Bot response','Refused to answer?','Explanation given?']),
+    },
+    sus,
+    overall: {
+      impression: getVal('overall_impression'),
+      improvement: getVal('improve_suggestion'),
+      hardest_scenario: getRadio('hardest'),
+      hardest_reason: getVal('hardest_reason'),
+      additional: getVal('additional_obs'),
+    }
+  };
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${pid}_evaluation.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+  <!-- Footer -->
+  <div class="footer">
+    <span class="footer-text">HWU AI STUDENT SERVICES ASSISTANT · STUDENTS ASSISTANT 4</span>
+    <span class="footer-accent">Thank you for your participation</span>
+  </div>
+
+</div>
+
+<script>
+function selectScenario(n) {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById('sc' + i).classList.remove('active');
+    document.getElementById('detail' + i).classList.remove('visible');
+  }
+  const card = document.getElementById('sc' + n);
+  const detail = document.getElementById('detail' + n);
+  card.classList.add('active');
+  detail.classList.add('visible');
+  detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+// Show first scenario by default
+selectScenario(1);
+</script>
+</body>
+</html>
