@@ -42,6 +42,31 @@ RAG + 语音交互版本（目前部署在 Kaggle 上）。
 
 ---
 
+### `collatz_proof_assistant.ipynb`（Collatz 实验型证明辅助）
+
+用于 Collatz（3n+1）猜想的计算实验与证明线索整理。
+
+- 目标：
+  - 范围验证（默认分阶段 1e5 -> 1e6 -> 1e7）
+  - 不变量统计与异常轨道提取
+  - 候选引理自动生成
+  - 导出 Lean/Coq 形式化占位模板
+- 主要输出（默认位于 `collatz_outputs/<run_name>/`）：
+  - `summary.json`
+  - `anomalies.csv`
+  - `candidate_lemmas.json`
+  - `candidate_lemmas.lean`
+  - `candidate_lemmas.v`
+  - `checkpoint.json`（大范围扫描时用于断点续跑）
+  - `smoke_*`（Smoke Test 生成的快速验证输出）
+- 使用方式：
+  1. 运行前 5 个代码单元完成环境与函数加载。
+  2. 运行 Smoke Test 单元确认流水线可用。
+  3. 在 Runtime Configuration 中把 `end_n` 提升到目标规模后运行阶段扫描。
+  4. 若中断，保留 `checkpoint.json` 并用 `resume=True` 继续扫描。
+
+---
+
 ## 已完成内容
 
 - 完成 RAG 模块接入

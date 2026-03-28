@@ -1,0 +1,50 @@
+{
+  "generated_at_utc": "2026-03-18T04:56:25.764400+00:00",
+  "lemmas": [
+    {
+      "id": "empirical_termination_on_scanned_range",
+      "statement": "All scanned n in [1, 6171] reached 1 within the configured iteration cap.",
+      "status": "supported",
+      "evidence": {
+        "count": 10,
+        "hit_cap_count": 0,
+        "iteration_cap": 20000
+      }
+    },
+    {
+      "id": "empirical_upper_bound_on_stopping_time",
+      "statement": "For scanned n, stopping time did not exceed 261.",
+      "status": "supported",
+      "evidence": {
+        "n": 6171,
+        "steps": 261
+      }
+    },
+    {
+      "id": "empirical_residue_class_variation",
+      "statement": "Average stopping times differ by residue class modulo the configured modulus.",
+      "status": "supported",
+      "evidence": {
+        "modulus": 16,
+        "fastest_avg_steps": {
+          "residue": 0,
+          "count": 0,
+          "termination_rate": 0.0,
+          "avg_steps": 0.0,
+          "avg_peak_ratio": 0.0,
+          "max_steps": 0,
+          "max_peak_ratio": 0.0
+        },
+        "slowest_avg_steps": {
+          "residue": 11,
+          "count": 2,
+          "termination_rate": 1.0,
+          "avg_steps": 186.0,
+          "avg_peak_ratio": 249.99391418642756,
+          "max_steps": 261,
+          "max_peak_ratio": 341.9259259259259
+        }
+      }
+    }
+  ]
+}
