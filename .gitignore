@@ -1,0 +1,9 @@
+# Local logs
+app.log
+
+# Local nested project repository
+coffee-shop/
+
+# Generated Collatz artifacts and notebook
+collatz_outputs/
+collatz_proof_assistant.ipynb
